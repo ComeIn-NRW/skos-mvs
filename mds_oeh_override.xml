@@ -1,0 +1,3066 @@
+<metadataset id="oeh" label="OEH" hidden="false">
+    <i18n>mds</i18n>
+    <name>Wir Lernen Online</name>
+    <widgets>
+        <widget>
+            <caption>Materialart (LOM)</caption>
+            <id>ccm:educationallearningresourcetype</id>
+            <type>multivalueTree</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/learningResourceType/index.json</valuespace>
+            <required>mandatoryForPublish</required>
+        </widget>
+        <widget>
+            <id>cclom:general_keyword</id>
+            <type>multivalueSuggestBadges</type>
+            <caption>Freie Schlagworte</caption>
+            <placeholder>Schlagwort ergänzen...</placeholder>
+            <hideIfEmpty>true</hideIfEmpty>
+            <searchable>false</searchable>
+        </widget>
+        <widget>
+            <caption>Datenschutz</caption>
+            <id>ccm:oeh_quality_data_privacy</id>
+            <allowempty>true</allowempty>
+            <type>singleoption</type>
+            <required>optional</required>
+            <values>
+                <value cap=" 0-D heimlich unangemessen datensaugend">0</value>
+                <value cap="✰ 1-D intransparent unangemessen viel datensaugend">1</value>
+                <value cap="✰✰ 2-D intransparent Daten saugend">2</value>
+                <value cap="✰✰✰ 3-D transparent unangemessen viel datensaugend">3</value>
+                <value cap="✰✰✰✰ 4-D angemessen viele Daten mit Einverständis">4</value>
+                <value cap="✰✰✰✰✰ 5-D keinerlei Datenweitergabe">5</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Sachrichtigkeit</caption>
+            <id>ccm:oeh_quality_correctness</id>
+            <allowempty>true</allowempty>
+            <type>singleoption</type>
+            <required>optional</required>
+            <values>
+                <value cap=" 0-R sachlich falsch">0</value>
+                <value cap="✰ 1-R enthält Unkorrektheiten">1</value>
+                <value cap="✰✰ 2-R sehr stark vereinfacht">2</value>
+                <value cap="✰✰✰ 3-R stark vereinfacht">3</value>
+                <value cap="✰✰✰✰ 4-R sachlich richtig, keine/wenige Belege angeführt">4</value>
+                <value cap="✰✰✰✰✰ 5-R wissenschaftlich belegt">5</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Aktualität</caption>
+            <id>ccm:oeh_quality_currentness</id>
+            <allowempty>true</allowempty>
+            <type>singleoption</type>
+            <required>optional</required>
+            <values>
+                <value cap=" 0-A veralteter Inhalt">0</value>
+                <value cap="✰ 1-A veraltet, aber teils noch relevant">1</value>
+                <value cap="✰✰ 2-A veraltete Darstellung, inhaltlich noch aktuell">2</value>
+                <value cap="✰✰✰ 3-A zeitlos aktuell">3</value>
+                <value cap="✰✰✰✰ 4- aktueller Wissensstand">4</value>
+                <value cap="✰✰✰✰✰ 5 - hochaktuell/neuester Wissensstand">5</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Neutralität</caption>
+            <id>ccm:oeh_quality_neutralness</id>
+            <allowempty>true</allowempty>
+            <type>singleoption</type>
+            <required>optional</required>
+            <values>
+                <value cap=" 0-N manipulativ">0</value>
+                <value cap="✰ 1-N unneutral">1</value>
+                <value cap="✰✰ 2-N ideologisch eingefärbt, aber korrekter Inhalt">2</value>
+                <value cap="✰✰✰ 3-N ideologisch eingefärbt, aber transparent">3</value>
+                <value cap="✰✰✰✰ 4-N neutrale Formulierung">4</value>
+                <value cap="✰✰✰✰✰ 5-N neutrale Formulierung, unabhängiger Ersteller">5</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Sprachlich</caption>
+            <id>ccm:oeh_quality_language</id>
+            <allowempty>true</allowempty>
+            <type>singleoption</type>
+            <required>optional</required>
+            <values>
+                <value cap=" 0-S unangemessen">0</value>
+                <value cap="✰ 1-S schwierige Sprache">1</value>
+                <value cap="✰✰ 2-S ausreichend verständlich">2</value>
+                <value cap="✰✰✰ 3-S angemessen">3</value>
+                <value cap="✰✰✰✰ 4-S leicht verständlich, sprachlich korrekt">4</value>
+                <value cap="✰✰✰✰✰ 5-S Zielgruppengerechte Sprache">5</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Medial passend</caption>
+            <id>ccm:oeh_quality_medial</id>
+            <allowempty>true</allowempty>
+            <type>singleoption</type>
+            <required>optional</required>
+            <values>
+                <value cap=" 0-ME Medial unpassend">0</value>
+                <value cap="✰ 1-ME Medial schwierig">1</value>
+                <value cap="✰✰ 2-ME Medial ausreichend, aber suboptimal">2</value>
+                <value cap="✰✰✰ 4-ME Medial passend">3</value>
+                <value cap="✰✰✰✰ 4-ME Medial gut">4</value>
+                <value cap="✰✰✰✰✰ 5-ME Medial hervorragend">5</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Didaktik/Methodik</caption>
+            <id>ccm:oeh_quality_didactics</id>
+            <allowempty>true</allowempty>
+            <type>singleoption</type>
+            <required>optional</required>
+            <values>
+                <value cap=" 0-M Methodik unangemessen">0</value>
+                <value cap="✰ 1-M Methodik ausreichend">1</value>
+                <value cap="✰✰ 2-M angemessene Methodik">2</value>
+                <value cap="✰✰✰ 3-M gute Methodik">3</value>
+                <value cap="✰✰✰✰ 4-M moderne, gute Methodik">4</value>
+                <value cap="✰✰✰✰✰ 5-M moderne, sehr gute Methodik">5</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Anbieter Renommee</caption>
+            <id>ccm:oeh_quality_transparentness</id>
+            <allowempty>true</allowempty>
+            <type>singleoption</type>
+            <required>optional</required>
+            <values>
+                <value cap=" 0-T keine Angabe oder unseriös">0</value>
+                <value cap="✰ 1-T Anbieter benannt, keine Kontaktangaben">1</value>
+                <value cap="✰✰ 2-T Anbieter benannt, Kontaktangaben vorhanden">2</value>
+                <value cap="✰✰✰ 3-T Anbieter benannt, umfangreiche Kontaktangaben">3</value>
+                <value cap="✰✰✰✰ 4-T Anbieter bekannt, umfangreiche Kontaktangaben">4</value>
+                <value cap="✰✰✰✰✰ 5-T renommierter Anbieter, korrekte Kontaktangaben">5</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Auffindbar</caption>
+            <id>ccm:oeh_accessibility_find</id>
+            <allowempty>true</allowempty>
+            <type>singleoption</type>
+            <required>optional</required>
+            <values>
+                <value>TODO</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Offen</caption>
+            <id>ccm:oeh_accessibility_open</id>
+            <allowempty>true</allowempty>
+            <type>singleoption</type>
+            <required>optional</required>
+            <values>
+                <value cap=" 0-O nicht frei nutzbar">0</value>
+                <value cap="✰ 1V vervielfältigbar, kopierbar">1</value>
+                <value cap="✰✰ 2V frei nutzbar, nicht änderbar">2</value>
+                <value cap="✰✰✰ 3V frei nutz- und änderbar (kein Remix)">3</value>
+                <value cap="✰✰✰✰ 4V frei nutz- und änderbar (inkl. Remix)">4</value>
+                <value cap="✰✰✰✰✰ 5V komplett offen &amp; frei">5</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Werbung</caption>
+            <id>ccm:containsAdvertisement</id>
+            <allowempty>true</allowempty>
+            <type>singleoption</type>
+            <required>optional</required>
+            <values>
+                <value cap=" Inhalt ist kaum von Werbung unterscheidbar">0</value>
+                <value cap="✰ enthält unangemessene störende Werbung">1</value>
+                <value cap="✰✰ enthält störend Werbung">2</value>
+                <value cap="✰✰✰ enthält zurückhaltend Werbung">3</value>
+                <value cap="✰✰✰✰ zurückhaltende für Zielgruppe geeignete Werbung">4</value>
+                <value cap="✰✰✰✰✰ ohne Werbung">5</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:oeh_quality_relevancy_for_education</id>
+            <caption>geeignet für Bildung (WLO-Suche)</caption>
+            <type>singleoption</type>
+            <values>
+                <value cap="Nein - ungeeignet">0</value>
+                <value cap="Ja - geeignet">1</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:oeh_quality_login</id>
+            <caption>Login notwendig</caption>
+            <type>singleoption</type>
+            <values>
+                <value cap="Zugang nur mit Login">0</value>
+                <value cap="Ohne Login zugänglich">1</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:oeh_quality_criminal_law</id>
+            <caption>Strafrecht</caption>
+            <type>singleoption</type>
+            <values>
+                <value cap="Nein - unauffällig">0</value>
+                <value cap="Ja - auffällig (K.O.)">1</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:oeh_quality_copyright_law</id>
+            <caption>Urheberrecht</caption>
+            <type>singleoption</type>
+            <values>
+                <value cap="Nein - unauffällig">0</value>
+                <value cap="Ja - auffällig (K.O.)">1</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:oeh_quality_protection_of_minors</id>
+            <caption>Jugendschutz</caption>
+            <type>singleoption</type>
+            <values>
+                <value cap="Nein - unauffällig">0</value>
+                <value cap="Ja - auffällig (K.O.)">1</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:oeh_quality_personal_law</id>
+            <caption>Persönlichkeitsrechte</caption>
+            <type>singleoption</type>
+            <values>
+                <value cap="Nein - unauffällig">0</value>
+                <value cap="Ja - auffällig (K.O.)">1</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:oeh_accessibility_security</id>
+            <caption>IT-Sicherheit</caption>
+            <type>multivalueTree</type>
+            <values>
+                <value>TODO</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:oeh_usability</id>
+            <caption>Usability / Funktional</caption>
+            <type>multivalueTree</type>
+            <values>
+                <value>TODO</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:oeh_interoperability</id>
+            <caption>Interoperabilität</caption>
+            <type>multivalueTree</type>
+            <values>
+                <value>TODO</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:published_date</id>
+            <caption>Veröffentlichungsdatum</caption>
+            <format>yyyy</format>
+            <type>date</type>
+        </widget>
+        <widget>
+            <id>ccm:license_to</id>
+            <caption>Datum Verfügbarkeitsende</caption>
+            <type>date</type>
+        </widget>
+        <widget>
+            <id>ccm:oeh_signatures</id>
+            <caption>Ausgangssignaturen</caption>
+            <placeholder>z.B. ISBN</placeholder>
+            <type>textarea</type>
+        </widget>
+        <widget>
+            <caption>Quelle / Herausgeber</caption>
+            <id>virtual:editorial_publisher</id>
+            <type>singleoption</type>
+            <defaultvalue>off</defaultvalue>
+            <values>
+                <value cap="Alles">off</value>
+                <value cap="Crawler">crawler</value>
+            </values>
+        </widget>
+        <widget>
+            <id>virtual:editorial_replicationsource</id>
+            <type>multivalueTree</type>
+            <caption>Herkunft des Inhalts</caption>
+        </widget>
+        <widget>
+            <id>virtual:editorial_title</id>
+            <type>text</type>
+            <caption>Titel durchsuchen</caption>
+        </widget>
+        <widget>
+            <caption>Status</caption>
+            <id>cclom:status</id>
+            <type>singleoption</type>
+            <values>
+                <value>TODO</value>
+            </values>
+        </widget>
+        <widget>
+            <inherit>false</inherit>
+            <caption>Dateigröße</caption>
+            <id>cclom:size</id>
+            <type>number</type>
+            <format>bytes</format>
+            <condition type="property" pattern="ccm:io" dynamic="true">virtual:type</condition>
+        </widget>
+        <widget>
+            <caption>WLO-Interner Inhalt</caption>
+            <id>ccm:oeh_internalDocument</id>
+            <type>checkbox</type>
+            <required>ignore</required>
+            <bottomCaption>Aktivieren, um diesen Inhalt Intern zu markieren. Dadurch können zusätzliche Felder ausgefüllt werden</bottomCaption>
+        </widget>
+        <widget>
+            <id>ccm:competence</id>
+            <type>multivalueTree</type>
+            <caption>Lernziele (Kompetenzen)</caption>
+            <bottomCaption>Kompetenzen, die mit diesem Inhalt gefördert werden sollen.</bottomCaption>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/digitalCompetencies/index.json</valuespace>
+        </widget>
+        <widget>
+            <id>ccm:oeh_competence_requirements</id>
+            <type>multivalueTree</type>
+            <caption>Vorkenntnisse (Kompetenzen)</caption>
+            <bottomCaption>Benötigte Vorkenntnisse, die zur Bearbeitung des Inhalts nötig sind.</bottomCaption>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/digitalCompetencies/index.json</valuespace>
+        </widget>
+        <widget>
+            <id>ccm:oeh_competence_check</id>
+            <type>multivalueTree</type>
+            <caption>Lernzielkontrolle (Kompetenzen)</caption>
+            <bottomCaption>Verweis auf Katalog mit einer Auswahl an Prüfungs- und Testfragen zur Lernzielkontrolle </bottomCaption>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/digitalCompetencies/index.json</valuespace>
+        </widget>
+        <widget>
+            <id>cclom:classification_keyword</id>
+            <type>multivalueFixedBadges</type>
+            <caption>Feste Schlagwörter</caption>
+            <placeholder>Wichtige Begriffe zum Material...</placeholder>
+            <suggestionSource>Sql</suggestionSource>
+            <suggestionQuery>select factual_term_ident, CASE WHEN factual_term_synonyms IS NULL THEN factual_term_value WHEN array_length(factual_term_synonyms,1) = 1 THEN format('%s (%s)',factual_term_value, factual_term_synonyms[1])  ELSE format('%s (%s, %s)',factual_term_value, factual_term_synonyms[1], factual_term_synonyms[2]) END from edu_factual_term where (lower(factual_term_value) like ? OR lower(factual_term_synonyms[0]) like ? OR lower(factual_term_synonyms[1]) like ? OR lower(factual_term_ident) like ?) order by char_length(factual_term_value) limit 100</suggestionQuery>
+            <suggestDisplayProperty>ccm:classification_keyword_display</suggestDisplayProperty>
+            <textEscapingPolicy>all</textEscapingPolicy>
+        </widget>
+        <widget>
+            <id>cclom:general_language</id>
+            <caption>Sprache(n)</caption>
+            <type>multivalueFixedBadges</type>
+            <valuespace>valuespaces.xml</valuespace>
+            <valuespace_i18n>valuespaces_i18n</valuespace_i18n>
+            <defaultvalue>de_DE</defaultvalue>
+            <bottomCaption>Alle Sprachen, die im Dokument vorkommen</bottomCaption>
+            <extended>false</extended>
+        </widget>
+        <widget>
+            <id>ccm:oeh_languageTarget</id>
+            <caption>Sprachniveau-Lernsprache</caption>
+            <type>singleoption</type>
+            <values>
+                <value cap="Deutsch">de</value>
+                <value cap="Englisch">en</value>
+                <value cap="Französisch">fr</value>
+                <value cap="Spanisch">es</value>
+                <value cap="Russisch">ru</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Medien-/Dateiformat</caption>
+            <id>virtual:mediatype</id>
+            <type>text</type>
+        </widget>
+        <widget>
+            <caption>Mimetyp</caption>
+            <id>cclom:format</id>
+            <type>text</type>
+        </widget>
+        <widget>
+            <caption>Kriterien für Redaktionsbuffet</caption>
+            <id>ccm:oeh_buffet_criteria</id>
+            <type>checkboxVertical</type>
+            <values>
+                <value cap="geeignet für Fachredaktionen">usable_for_buffet</value>
+                <value cap="fachlich korrekt">content_valid</value>
+                <value cap="sprachlich in Ordnung">speech_valid</value>
+                <value cap="Didaktik / Methodik ist gut">didactics_valid</value>
+                <value cap="Medial gut oder passend">medial_relevant</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Nicht erfüllte, rechtlichte Kriterien</caption>
+            <id>ccm:unmetLegalCriteria</id>
+            <type>checkboxVertical</type>
+            <values>
+                <value cap="geeignet für Bildung (WLO-Suche)">relevant_content</value>
+                <value cap="Zugang kostenlos &amp; ohne Login">free_access</value>
+                <value cap="Strafrecht - Keine Verstöße">criminal_law</value>
+                <value cap="Urheberrecht - Keine Verstöße">copyright_law</value>
+                <value cap="Jugendschutz - Keine Verstöße">protection_of_minors</value>
+                <value cap="Perönlichkeitsrechte - Keine Verstöße">personality_right</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Abspieldauer</caption>
+            <id>cclom:duration</id>
+            <type>duration</type>
+        </widget>
+        <widget>
+            <caption>Zeitbedarf im Unterricht</caption>
+            <id>cclom:typicallearningtime</id>
+            <bottomCaption>Die durchschnittliche benötigte Zeitdauer zur Bearbeitung der Ressource.</bottomCaption>
+            <max>1200</max>
+            <required>ignore</required>
+            <type>duration</type>
+        </widget>
+        <widget>
+            <caption>Fach-/Sachgebiet</caption>
+            <id>ccm:taxonid</id>
+            <type>multivalueFixedBadges</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <required>mandatoryForPublish</required>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/discipline/index.json</valuespace>
+            <required>mandatoryForPublish</required>
+        </widget>
+        <widget>
+            <caption>Lizenz</caption>
+            <id>ccm:commonlicense_key</id>
+            <type>text</type>
+            <required>mandatoryForPublish</required>
+        </widget>
+        <widget>
+            <caption>Kategorie</caption>
+            <id>ccm:objecttype</id>
+            <type>text</type>
+            <template>editorial_sources</template>
+            <defaultvalue>SOURCE</defaultvalue>
+        </widget>
+        <widget>
+            <id>cclom:general_description</id>
+            <type>textarea</type>
+            <caption>Beschreibung</caption>
+            <placeholder>Das MATERIALART des ANBIETERS zeigt INHALTSBESCHREIBUNG. Es eignet sich für ZWECK für folgende ZIELGRUPPE</placeholder>
+            <bottomCaption>Beschreibe den Inhalt</bottomCaption>
+            <hideIfEmpty>true</hideIfEmpty>
+            <required>recommended</required>
+        </widget>
+        <widget>
+            <id>virtual:type</id>
+            <type>text</type>
+            <caption>Elementtyp</caption>
+        </widget>
+        <widget>
+            <id>cm:title</id>
+            <type>text</type>
+            <caption>Titel der Sammlung</caption>
+            <placeholder>Gib eine Titel für die Sammlung an</placeholder>
+            <hideIfEmpty>true</hideIfEmpty>
+            <required>mandatory</required>
+        </widget>
+        <widget>
+            <id>cm:description</id>
+            <type>textarea</type>
+            <caption>Beschreibung der Sammlung</caption>
+            <placeholder>Gib eine Beschreibung für die Sammlung an</placeholder>
+            <hideIfEmpty>true</hideIfEmpty>
+            <required>recommended</required>
+        </widget>
+        <widget>
+            <caption>Bildungsstufe</caption>
+            <id>ccm:educationalcontext</id>
+            <type>multivalueFixedBadges</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/educationalContext/index.json</valuespace>
+            <required>recommended</required>
+        </widget>
+        <widget>
+            <id>ccm:oeh_lrt</id>
+            <caption>Kategorie / Typ des Inhalts</caption>
+            <type>multivalueTree</type>
+            <required>mandatory</required>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/new_lrt/index.json</valuespace>
+            <suggestionReceiver>valuespaces@openeduhub.de</suggestionReceiver>
+        </widget>
+        <widget>
+            <id>ccm:oeh_lrt_aggregated</id>
+            <caption>Materialart (WLO / Aggregiert)</caption>
+            <type>multivalueFixedBadges</type>
+            <required>ignore</required>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/new_lrt_aggregated/index.json</valuespace>
+        </widget>
+        <widget>
+            <id>ccm:oeh_widgets</id>
+            <caption>Widget-Typ (nur zur Kontrolle)</caption>
+            <bottomCaption>Die alten Widget-Typen von WLO. Bitte nicht mehr bearbeiten.</bottomCaption>
+            <type>multivalueTree</type>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/widgets/index.json</valuespace>
+            <required>ignore</required>
+        </widget>
+        <widget>
+            <id>ccm:educationalintendedenduserrole</id>
+            <caption>Zielgruppe</caption>
+            <type>multivalueFixedBadges</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/intendedEndUserRole/index.json</valuespace>
+            <required>recommended</required>
+        </widget>
+        <widget>
+            <caption>Kategorie  (nur zur Kontrolle)</caption>
+            <id>ccm:objecttype</id>
+            <type>singleoption</type>
+            <required>ignore</required>
+            <bottomCaption>Die alte Kategorisierung von WLO. Bitte nicht mehr bearbeiten.</bottomCaption>
+            <values>
+                <value cap="Material">MATERIAL</value>
+                <value cap="Tool">TOOL</value>
+                <value cap="Quelle">SOURCE</value>
+            </values>
+        </widget>
+        <widget>
+            <caption>Art des Tools (nur zur Kontrolle)</caption>
+            <bottomCaption>Die alten Tool-Typen von WLO. Bitte nicht mehr bearbeiten.</bottomCaption>
+            <id>ccm:toolCategory</id>
+            <type>multivalueFixedBadges</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/toolCategory/index.json</valuespace>
+            <condition type="PROPERTY" pattern="TOOL" dynamic="true">ccm:objecttype</condition>
+            <required>ignore</required>
+        </widget>
+        <widget>
+            <caption>Art der Seite  (nur zur Kontrolle)</caption>
+            <bottomCaption>Die alten Quellen-Typen von WLO. Bitte nicht mehr bearbeiten.</bottomCaption>
+            <id>ccm:sourceContentType</id>
+            <type>multivalueFixedBadges</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/sourceContentType/index.json</valuespace>
+            <condition type="PROPERTY" pattern="SOURCE" dynamic="true">ccm:objecttype</condition>
+            <required>ignore</required>
+        </widget>
+        <widget>
+            <id>ccm:collectionshorttitle</id>
+            <caption>Kurztitel</caption>
+            <type>text</type>
+            <bottomCaption>Wird in der Navigation (z.B. Breadcrumbs) angezeigt</bottomCaption>
+        </widget>
+        <widget>
+            <id>ccm:pointsdefault</id>
+            <caption>Geschätzte Anzahl Inhalte</caption>
+            <type>number</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <condition type="PROPERTY" pattern="SOURCE" dynamic="true">ccm:objecttype</condition>
+        </widget>
+        <!--<widget>
+            <id>ccm:editorial_checklist</id>
+            <caption>Inhalts-Erschließungsstatus</caption>
+            <type>singleoption</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <allowempty>true</allowempty>
+            <condition type="PROPERTY" pattern="MATERIAL" dynamic="true">ccm:objecttype</condition>
+            <values>
+                <value cap="0. formelle Sichtung anstehend">0</value>
+                <value cap="1. in formeller Sichtung">1</value>
+                <value cap="2. In Suche aufgenommen">2</value>
+                <value cap="3. entspricht nicht den Anforderungen">3</value>
+                <value cap="4. in Suche aufgenommen, in Fachredaktioneller Prüfung">4</value>
+                <value cap="9. in Suche und Fachportal(en) aufgenommen">9</value>
+            </values>
+        </widget>-->
+        <widget>
+            <id>ccm:editorial_checklist</id>
+            <caption>Inhalts-Erschließungsstatus</caption>
+            <type>singleoption</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <allowempty>true</allowempty>
+            <condition type="PROPERTY" pattern=".*1846d876-d8fd-476a-b540-b8ffd713fedb.*" dynamic="true">ccm:oeh_lrt</condition>
+            <!--<template>editorial_search</template>-->
+            <values>
+                <value cap="0. formelle Sichtung anstehend">0</value>
+                <value cap="2. In Suche aufgenommen">2</value>
+                <value cap="3. entspricht nicht den Anforderungen">3</value>
+                <value cap="9. in Suche und Fachportal(en) aufgenommen">9</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:editorial_checklist</id>
+            <caption>Inhalts-Erschließungsstatus</caption>
+            <type>multivalueFixedBadges</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <allowempty>true</allowempty>
+            <condition type="TOOLPERMISSION">TOOLPERMISSION_SOURCE_ACQUISTION</condition>
+            <template>editorial_search</template>
+            <values>
+                <value cap="0. formelle Sichtung anstehend">0</value>
+                <value cap="2. In Suche aufgenommen">2</value>
+                <value cap="3. entspricht nicht den Anforderungen">3</value>
+                <value cap="9. in Suche und Fachportal(en) aufgenommen">9</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:editorial_checklist</id>
+            <caption>Quellen-Erschließungsstatus</caption>
+            <type>singleoption</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <allowempty>true</allowempty>
+            <condition type="PROPERTY" pattern=".*3869b453-d3c1-4b34-8f25-9127e9d68766.*" dynamic="true">ccm:oeh_lrt</condition>
+            <values>
+                <value cap="0. redaktionelle Sichtung anstehend">0</value>
+                <value cap="1. in redaktioneller Sichtung">1</value>
+                <value cap="2. Quelle aufgenommen, Inhalte werden nicht erschlossen">2</value>
+                <value cap="3. entspricht nicht den Anforderungen">3</value>
+                <value cap="4. in rechtlicher Prüfung">4</value>
+                <value cap="5. zur maschinellen Erschließung freigegeben">5</value>
+                <value cap="6. maschinelle Erschließung anstehend">6</value>
+                <value cap="7. in maschineller Erschließung">7</value>
+                <value cap="8. in redaktioneller Rohdatenprüfung">8</value>
+                <value cap="9. fertig erschlossen, Inhalte verfügbar">9</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:editorial_checklist</id>
+            <caption>Tool-Erschließungsstatus</caption>
+            <type>singleoption</type>
+            <hideIfEmpty>true</hideIfEmpty>
+            <allowempty>true</allowempty>
+            <condition type="PROPERTY" pattern=".*cefccf75-cba3-427d-9a0f-35b4fedcbba1.*" dynamic="true">ccm:oeh_lrt</condition>
+            <values>
+                <value cap="0. redaktionelle Sichtung anstehend">0</value>
+                <value cap="1. in redaktioneller Sichtung">1</value>
+                <value cap="2. In Suche aufgenommen, Tool wird nicht angeschlossen">2</value>
+                <value cap="3. entspricht nicht den Anforderungen">3</value>
+                <value cap="4. in rechtlicher Prüfung">4</value>
+                <value cap="5. zum maschinellen Anschluss freigegeben">5</value>
+                <value cap="6. maschineller Anschluss anstehend">6</value>
+                <value cap="7. maschineller Anschluss in Arbeit">7</value>
+                <value cap="8. Testphase für angeschlossenes Tool anstehend">8</value>
+                <value cap="9. Tool angeschlossen, verfügbar">9</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:editorial_state</id>
+            <caption>Redaktionsstatus / Sichtbarkeit</caption>
+            <bottomCaption>für Wordpress</bottomCaption>
+            <type>singleoption</type>
+            <values>
+                <value cap="Aktiviert / Sichtbar">activated</value>
+                <value cap="Deaktiviert / Ausgeblendet">deactivated</value>
+            </values>
+        </widget>
+        <widget>
+            <inherit>false</inherit>
+            <id>cclom:title</id>
+            <caption>Voller Titel</caption>
+            <placeholder>Gib dem Inhalt einen Namen</placeholder>
+            <bottomCaption>Name des Inhalts</bottomCaption>
+            <type>text</type>
+            <required>mandatory</required>
+        </widget>
+        <!--<widget>
+            <inherit>false</inherit>
+            <id>cclom:title2</id>
+            <caption>Name des Inhalts</caption>
+            <placeholder>Gib dem Inhalt einen Namen</placeholder>
+            <type>text</type>
+            <required>mandatory</required>
+            <condition type="PROPERTY" pattern=".*1846d876-d8fd-476a-b540-b8ffd713fedb.*" dynamic="true">ccm:oeh_lrt</condition>
+        </widget>
+        <widget>
+            <id>cclom:title2</id>
+            <caption>Name des Tools</caption>
+            <placeholder>Gib dem Tool einen Namen</placeholder>
+            <type>text</type>
+            <required>mandatory</required>
+            <condition type="PROPERTY" pattern=".*cefccf75-cba3-427d-9a0f-35b4fedcbba1.*" dynamic="true">ccm:oeh_lrt</condition>
+        </widget>
+        <widget>
+            <id>cclom:title2</id>
+            <caption>Name der Quelle</caption>
+            <placeholder>Gib der Quelle einen Titel</placeholder>
+            <type>text</type>
+            <required>mandatory</required>
+            <condition type="PROPERTY" pattern=".*3869b453-d3c1-4b34-8f25-9127e9d68766.*" dynamic="true">ccm:oeh_lrt</condition>
+        </widget>-->
+        <widget>
+            <id>cclom:title</id>
+            <caption>Titel vergeben</caption>
+            <placeholder>Gib dem Inhalt einen Namen</placeholder>
+            <type>text</type>
+            <required>mandatory</required>
+            <template>wlo_upload_content</template>
+        </widget>
+        <widget>
+            <id>cclom:title</id>
+            <caption>Titel vergeben</caption>
+            <placeholder>Gib dem Tool einen Titel</placeholder>
+            <type>text</type>
+            <required>mandatory</required>
+            <template>wlo_upload_tool</template>
+        </widget>
+        <widget>
+            <id>cclom:title</id>
+            <caption>Titel vergeben</caption>
+            <placeholder>Gib der Quelle einen Titel</placeholder>
+            <type>text</type>
+            <required>mandatory</required>
+            <template>wlo_upload_source</template>
+        </widget>
+        <widget>
+            <id>ccm:custom_license</id>
+            <caption>Lizenz</caption>
+            <type>singleoption</type>
+            <allowempty>true</allowempty>
+            <placeholder>Wähle die passende Lizenzart</placeholder>
+            <valuespace>https://openeduhub.github.io/oeh-metadata-vocabs-playground/w3id.org/openeduhub/vocabs-playground/licenses/index.json</valuespace>
+        </widget>
+        <widget>
+            <id>ccm:custom_license</id>
+            <caption>Lizenz</caption>
+            <type>singleoption</type>
+            <allowempty>true</allowempty>
+            <placeholder>Wähle die passende Lizenzart</placeholder>
+            <!-- must be defined -->
+            <valuespace>https://openeduhub.github.io/oeh-metadata-vocabs-playground/w3id.org/openeduhub/vocabs-playground/licenses/index.json</valuespace>
+            <template>wlo_upload_tool</template>
+        </widget>
+        <widget>
+            <id>ccm:author_freetext</id>
+            <caption>Der Name des Urhebers soll wie folgt genannt werden</caption>
+            <placeholder>z.B.  Lisa Müller und Karsten Schmitt für den Beispiel-Verein publiziert über den OER-Verlag Berlin</placeholder>
+            <type>textarea</type>
+        </widget>
+        <widget>
+            <id>ccm:lifecyclecontributer_author</id>
+            <caption>cb_contr_author</caption>
+            <icon>person</icon>
+            <type>vcard</type>
+            <hideIfEmpty>false</hideIfEmpty>
+            <required>recommended</required>
+        </widget>
+        <widget>
+            <id>ccm:curriculum</id>
+            <caption>Lehrplanthema</caption>
+            <placeholder>Gib ein Thema ein, zu dem dein Inhalt passt</placeholder>
+            <type>multivalueTree</type>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/oeh-topics/5e40e372-735c-4b17-bbf7-e827a5702b57.json</valuespace>
+        </widget>
+        <widget>
+            <id>cclom:aggregationlevel</id>
+            <caption>lom_prop_general_aggregationlevel</caption>
+            <type>singleoption</type>
+            <valuespace>aggregation_level.xml</valuespace>
+            <valuespace_i18n>valuespaces_i18n</valuespace_i18n>
+            <valuespace_i18n_prefix>al_</valuespace_i18n_prefix>
+        </widget>
+        <widget>
+            <id>ccm:oeh_languageLevel</id>
+            <caption>Sprachniveaustufen (GER)</caption>
+            <type>multivalueTree</type>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/languageLevel/index.json</valuespace>
+        </widget>
+        <widget>
+            <id>ccm:oeh_digitalCompetencies</id>
+            <caption>Digitale Kompetenzen</caption>
+            <bottomCaption>für Inhalte vom Typ Methoden</bottomCaption>
+            <type>multivalueTree</type>
+            <valuespace>https://openeduhub.github.io/oeh-metadata-vocabs-playground/w3id.org/openeduhub/vocabs-playground/digitalCompetencies/index.json</valuespace>
+        </widget>
+        <widget>
+            <inherit>false</inherit>
+            <id>ccm:wwwurl</id>
+            <caption>URL</caption>
+            <placeholder>cm_wwwurl_placeholder</placeholder>
+            <bottomCaption>Internetadresse des Inhalts</bottomCaption>
+            <type>text</type>
+            <required>true</required>
+            <condition type="PROPERTY">ccm:wwwurl</condition>
+        </widget>
+        <widget>
+            <id>ccm:wwwurl</id>
+            <caption>URL durchsuchen</caption>
+            <type>text</type>
+            <template>editorial_search</template>
+        </widget>
+        <widget>
+            <id>ccm:wwwurl</id>
+            <caption>URL des Tools</caption>
+            <placeholder>cm_wwwurl_placeholder</placeholder>
+            <type>text</type>
+            <required>true</required>
+            <template>wlo_upload_tool</template>
+        </widget>
+        <widget>
+            <id>ccm:wwwurl</id>
+            <caption>URL des Tools</caption>
+            <placeholder>cm_wwwurl_placeholder</placeholder>
+            <type>text</type>
+            <required>true</required>
+            <template>wlo_upload_tool</template>
+        </widget>
+        <widget>
+            <id>ccm:wwwurl</id>
+            <caption>URL der Quelle</caption>
+            <placeholder>cm_wwwurl_placeholder</placeholder>
+            <type>text</type>
+            <required>true</required>
+            <template>wlo_upload_source</template>
+        </widget>
+        <widget>
+            <inherit>false</inherit>
+            <caption>Interner Quellenname (Bezug zu Crawler)</caption>
+            <id>ccm:general_identifier</id>
+            <type>text</type>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/sources/index.json</valuespace>
+            <hideIfEmpty>true</hideIfEmpty>
+            <condition type="TOOLPERMISSION">TOOLPERMISSION_SOURCE_ACQUISTION</condition>
+            <bottomCaption>Nur für Quellen-Datensätze: Über dieses Feld wird die ID gesteuert, welche die gecrawlten Datensätze mit dieser Quelle verbindet. Bitte nur für bereits gecrawlte Quellen ausfüllen.</bottomCaption>
+        </widget>
+        <widget>
+            <inherit>false</inherit>
+            <id>ccm:replicationsource</id>
+            <type>singlevalueTree</type>
+            <caption>Herkunft des Inhalts</caption>
+            <suggestionReceiver>valuespaces@openeduhub.de</suggestionReceiver>
+            <valuespace_sort>caption</valuespace_sort>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/sources/index.json</valuespace>
+            <required>mandatoryForPublish</required>
+            <condition type="PROPERTY" negate="true">ccm:replicationsourceid</condition>
+        </widget>
+        <widget>
+            <id>ccm:oeh_publisher_combined</id>
+            <type>singlevalueSuggestBadges</type>
+            <caption>Herkunft des Inhalts</caption>
+            <required>mandatoryForPublish</required>
+            <condition type="PROPERTY" negate="true">ccm:replicationsourceid</condition>
+        </widget>
+        <widget>
+            <id>ccm:replicationsource</id>
+            <type>singlevalueTree</type>
+            <caption>Herkunft des Inhalts</caption>
+            <suggestionReceiver>valuespaces@openeduhub.de</suggestionReceiver>
+            <valuespace_sort>caption</valuespace_sort>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/sources/index.json</valuespace>
+            <required>mandatoryForPublish</required>
+            <template>node_license_bulk</template>
+        </widget>
+        <widget>
+            <id>ccm:replicationsource</id>
+            <type>singlevalueTree</type>
+            <caption>Herkunft des Inhalts</caption>
+            <suggestionReceiver>valuespaces@openeduhub.de</suggestionReceiver>
+            <valuespace_sort>caption</valuespace_sort>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/sources/index.json</valuespace>
+            <template>editorial_search</template>
+        </widget>
+        <widget>
+            <inherit>false</inherit>
+            <id>ccm:lifecyclecontributer_publisher</id>
+            <type>vcard</type>
+            <caption>Herausgeber</caption>
+            <required>mandatoryForPublish</required>
+            <!--<condition type="PROPERTY" pattern=".*3869b453-d3c1-4b34-8f25-9127e9d68766" dynamic="true" negate="true">ccm:oeh_lrt</condition>-->
+            <!--<condition type="PROPERTY" negate="true">ccm:replicationsourceid</condition>-->
+        </widget>
+        <widget>
+            <id>virtual:email</id>
+            <caption>E-Mail (Optional)</caption>
+            <placeholder>jemand@beispiel.de</placeholder>
+            <type>email</type>
+        </widget>
+        <widget>
+            <id>virtual:newsletter</id>
+            <caption>Für Newsletter anmelden</caption>
+            <type>checkbox</type>
+        </widget>
+        <widget>
+            <id>virtual:data_privacy</id>
+            <caption>Datenschutzhinweis gelesen?</caption>
+            <required>mandatory</required>
+            <type>checkbox</type>
+        </widget>
+        <widget>
+            <id>virtual:publish_location</id>
+            <type>singleoption</type>
+            <allowempty>true</allowempty>
+            <caption>Wem soll dein Inhalt zur Überprüfung übergeben werden?</caption>
+            <hideIfEmpty>true</hideIfEmpty>
+            <valuespace>https://openeduhub.github.io/oeh-metadata-vocabs-playground/w3id.org/openeduhub/vocabs-playground/editorialStaff/index.json</valuespace>
+        </widget>
+        <widget>
+            <id>virtual:editorial_status</id>
+            <type>singleoption</type>
+            <caption>Buffets</caption>
+            <defaultvalue>all</defaultvalue>
+            <values>
+                <value cap="Alles">all</value>
+                <value cap="Prüfbuffet">check</value>
+                <value cap="Suchbuffet">search</value>
+                <!-- is obsolet through migration atm -->
+                <!--<value cap="Redaktionsbuffet">buffet</value>-->
+                <value cap="Redaktionsbuffet">buffet_plus</value>
+                <value cap="Interne Inhalte">internal</value>
+                <value cap="Abgelehnte Inhalte">rejected</value>
+            </values>
+        </widget>
+        <widget>
+            <id>virtual:editorial_filter</id>
+            <type>singleoption</type>
+            <caption>Eingangsweg</caption>
+            <defaultvalue>off</defaultvalue>
+            <values>
+                <value cap="Alles">off</value>
+                <value cap="Nur Objekte aus dem Webformular">form</value>
+                <value cap="Nur Objekte vom Team">from_team</value>
+                <value cap="Nur Objekte vom Crawler">from_crawler</value>
+            </values>
+        </widget>
+        <widget>
+            <id>virtual:editorial_edit_type</id>
+            <type>singleoption</type>
+            <caption>Bearbeitungszustand</caption>
+            <bottomCaption>* Beta</bottomCaption>
+            <defaultvalue>off</defaultvalue>
+            <values>
+                <value cap="Alles">off</value>
+                <value cap="Nur maschinell bearbeitet">crawler</value>
+                <value cap="Redaktionell bearbeitet">team</value>
+            </values>
+        </widget>
+        <widget>
+            <id>virtual:editorial_file_type</id>
+            <type>multivalueFixedBadges</type>
+            <caption>Datei-/Editorformat</caption>
+            <values>
+                <value cap="H5P-Dateien (*.h5p)">h5p</value>
+                <value cap="Moodle-Dateien (*.mbz)">moodle</value>
+                <value cap="Bilder">image</value>
+                <value cap="Videos">video</value>
+                <value cap="Audios">audio</value>
+                <value cap="PDFs">application/pdf</value>
+                <value cap="Office-Dokumente">application/vnd.openxmlformats-officedocument</value>
+            </values>
+        </widget>
+        <widget>
+            <id>virtual:editorial_taxonid</id>
+            <type>multivalueFixedBadges</type>
+            <caption>Fach-/Sachgebiet</caption>
+            <bottomCaption>Findet sowohl direkt vergebene Fachgebiete als auch über Sammlungszugehörigkeit vererbte</bottomCaption>
+            <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/discipline/index.json</valuespace>
+        </widget>
+        <widget>
+            <id>virtual:editorial_exclusion</id>
+            <type>checkboxVertical</type>
+            <caption>Redaktioneller Handlungsbedarf</caption>
+            <defaultvalue></defaultvalue>
+            <values>
+                <value cap="Objekte mit rechtlichen Problemen">legal</value>
+                <value cap="Objekte mit fehlenden Pflichtdaten">required</value>
+                <value cap="Objekte mit defekten/gelöschten Links">links</value>
+                <value cap="Private/Ungeprüfte Objekte in Sammlungen">invalid_collection_elements</value>
+                <!--<value cap="OER-Inhalte">oer</value>-->
+            </values>
+        </widget>
+        <widget>
+            <id>virtual:time_after_created</id>
+            <type>date</type>
+            <caption>Zeitbereich filtern (Erstellt)</caption>
+            <bottomCaption>Nur Inhalte neuer als das gewählte Datum werden angezeigt</bottomCaption>
+            <condition type="TOOLPERMISSION">TOOLPERMISSION_EDITORIAL_FILTER</condition>
+        </widget>
+        <widget>
+            <id>virtual:time_after_modified</id>
+            <type>date</type>
+            <caption>Zeitbereich filtern (Geändert)</caption>
+            <bottomCaption>Nur Inhalte geändert nach dem gewählten Datum werden angezeigt</bottomCaption>
+            <condition type="TOOLPERMISSION">TOOLPERMISSION_EDITORIAL_FILTER</condition>
+        </widget>
+        <widget>
+            <id>virtual:author</id>
+            <type>multivalueAuthorityBadges</type>
+            <caption>Nach Autoren filtern</caption>
+            <bottomCaption>Nur Inhalte der gewählten Person werden angezeigt</bottomCaption>
+        </widget>
+        <widget>
+            <id>virtual:search_tasks</id>
+            <type>radioVertical</type>
+            <defaultvalue>to_me</defaultvalue>
+            <values>
+                <value cap="Mir zugewiesen">to_me</value>
+                <value cap="Von mir vergeben">from_me</value>
+            </values>
+        </widget>
+        <widget>
+            <id>cclom:version</id>
+            <type>text</type>
+            <caption>Versionsnummer</caption>
+        </widget>
+        <widget>
+            <!--TODO: FAILS -->
+            <!--<inherit>false</inherit>-->
+            <id>sys:node-uuid</id>
+            <type>text</type>
+            <link>_BLANK</link>
+            <format>https://redaktion.openeduhub.net/edu-sharing/components/render/${value}</format>
+            <caption>WLO-Identifier</caption>
+            <template>node_identify_render</template>
+        </widget>
+        <widget>
+            <id>sys:node-uuid</id>
+            <type>text</type>
+            <link>_BLANK</link>
+            <format>https://redaktion.openeduhub.net/edu-sharing/components/render/${value}</format>
+            <caption>URL</caption>
+            <condition type="PROPERTY" negate="true">ccm:wwwurl</condition>
+            <template>node_description_render</template>
+        </widget>
+        <widget>
+            <id>ccm:published_handle_id</id>
+            <caption>UID - im Internet eindeutige Adresse</caption>
+            <type>text</type>
+            <!--<link>_BLANK</link>
+            <format>http://hdl.handle.net/${value}</format>-->
+            <hideIfEmpty>false</hideIfEmpty>
+        </widget>
+        <!--<widget>
+            <id>sys:node-uuid</id>
+            <type>text</type>
+            <link>_BLANK</link>
+            <format>https://redaktion.openeduhub.net/edu-sharing/components/render/${value}</format>
+            <caption>ID WLO</caption>
+            <condition type="PROPERTY" negate="true">ccm:wwwurl</condition>
+            <template>node_identify_render</template>
+        </widget>-->
+        <widget>
+            <id>virtual:portal_type</id>
+            <caption>Sammlungsart</caption>
+            <type>radioVertical</type>
+            <defaultvalue>0</defaultvalue>
+            <values>
+                <value cap="Portale">0</value>
+                <value cap="Themen / Sammlungen">1</value>
+            </values>
+        </widget>
+        <widget>
+            <id>ccm:collection_proposal_status</id>
+            <caption>Status des Vorschlags</caption>
+            <defaultvalue>PENDING</defaultvalue>
+            <type>radioVertical</type>
+            <values>
+                <value cap="Ausstehend">PENDING</value>
+                <value cap="Abgelehnt">DECLINED</value>
+                <value cap="Akzeptiert">ACCEPTED</value>
+            </values>
+        </widget>
+        <widget>
+            <id>virtual:collection_id</id>
+            <caption>Mein Fachbereich</caption>
+            <type>text</type>
+        </widget>
+        <widget>
+            <id>virtual:collection_id_tree</id>
+            <caption>Sammlungs-Inhalte + Unterebenen</caption>
+            <type>text</type>
+        </widget>
+        <widget>
+            <id>virtual:collection_id_primary</id>
+            <caption>Sammlungs-Inhalte</caption>
+            <type>text</type>
+        </widget>
+
+        <widget>
+            <id>virtual:collection_public</id>
+            <caption>Sichtbarkeit</caption>
+            <type>checkboxVertical</type>
+            <values>
+                <value cap="Veröffentlicht">published</value>
+                <value cap="Unveröffentlicht">not_published</value>
+            </values>
+        </widget>
+        <widget>
+            <id>virtual:collection_missing</id>
+            <caption>Fehlende Metadaten</caption>
+            <type>checkboxVertical</type>
+            <values>
+                <value cap="Beschreibung fehlt">cm:description</value>
+                <value cap="Kurztitel fehlt">ccm:collectionshorttitle</value>
+                <value cap="Bildungsstufe fehlt">ccm:educationalcontext</value>
+                <value cap="Schlagworte fehlen">cclom:general_keyword</value>
+            </values>
+        </widget>
+        <widget>
+            <id>virtual:kita_search</id>
+            <caption>Kita Medien</caption>
+            <type>radioVertical</type>
+            <defaultvalue>${kita_search}</defaultvalue>
+            <values>
+                <value cap="Alle Medien"></value>
+                <value cap="Nur Kita">kita</value>
+            </values>
+        </widget>
+        <widget>
+            <id>virtual:editorial_license</id>
+            <caption>Lizenzen</caption>
+            <type>radioVertical</type>
+            <defaultvalue>all</defaultvalue>
+            <values>
+                <value cap="Alle">all</value>
+                <value cap="OER (CC-BY, CC-BY-SA, CC-0)">oer</value>
+                <value cap="Nicht-OER">none_oer</value>
+                <value cap="Ohne Lizenzangabe">none</value>
+            </values>
+        </widget>
+    </widgets>
+    <groups>
+        <group>
+            <id>___old_io</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>node_basic</view>
+                <view>node_extended</view>
+                <view>node_extended_specific</view>
+            </views>
+        </group>
+        <group>
+            <id>io</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>node_description</view>
+                <view>node_classification</view>
+                <view>node_paedagogics</view>
+                <view>node_quality</view>
+                <view>node_quality2</view>
+                <view>node_accessibility</view>
+                <view>node_license</view>
+                <view>node_identify</view>
+                <view>node_index</view>
+            </views>
+        </group>
+        <group>
+            <id>collection</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>node_description_collection</view>
+                <view>node_classification</view>
+                <view>node_paedagogics</view>
+                <view>node_quality</view>
+                <view>node_quality2</view>
+                <view>node_accessibility</view>
+                <view>node_license</view>
+                <view>node_identify</view>
+                <view>node_index</view>
+            </views>
+        </group>
+        <group>
+            <id>io_bulk</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>node_description_bulk</view>
+                <view>node_classification</view>
+                <view>node_paedagogics</view>
+                <view>node_quality</view>
+                <view>node_quality2</view>
+                <view>node_accessibility</view>
+                <view>node_license_bulk</view>
+            </views>
+        </group>
+        <group>
+            <id>io_wordpress</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>node_wordpress</view>
+            </views>
+        </group>
+        <group>
+            <id>io_render</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>node_description_render</view>
+                <view>node_collections_render</view>
+                <view>node_paedagogics_render</view>
+                <view>node_classification_render</view>
+                <view>node_quality_render</view>
+                <view>node_license_render</view>
+                <view>node_identify_render</view>
+                <view>node_index_render</view>
+            </views>
+        </group>
+        <group>
+            <id>wlo_upload_content</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>wlo_upload_dummy</view>
+                <view>wlo_upload_content</view>
+                <view>wlo_upload_content_extended</view>
+                <view>wlo_upload_newsletter</view>
+            </views>
+        </group>
+        <group>
+            <id>wlo_upload_tool</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>wlo_upload_dummy</view>
+                <view>wlo_upload_tool</view>
+                <view>wlo_upload_content_extended</view>
+                <view>wlo_upload_newsletter</view>
+            </views>
+        </group>
+        <group>
+            <id>wlo_upload_source</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>wlo_upload_dummy</view>
+                <view>wlo_upload_source</view>
+                <view>wlo_upload_content_extended</view>
+                <view>wlo_upload_newsletter</view>
+            </views>
+        </group>
+        <group>
+            <id>ngsearch</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>search</view>
+                <view>search_suggestions</view>
+            </views>
+        </group>
+        <group>
+            <id>editorial_render</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>node_description_editorial_render</view>
+                <view>node_paedagogics_editorial_render</view>
+                <view>node_classification_render</view>
+                <view>node_license_render</view>
+                <view>node_identify_render</view>
+                <view>node_index_render</view>
+            </views>
+        </group>
+        <group>
+            <id>editorial_render_collection</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>node_description_editorial_collection_render</view>
+                <view>node_paedagogics_editorial_render</view>
+                <view>node_classification_render</view>
+                <view>node_license_render</view>
+                <view>node_identify_render</view>
+                <view>node_index_render</view>
+            </views>
+        </group>
+        <group>
+            <id>editorial_search</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>editorial_search</view>
+            </views>
+        </group>
+        <group>
+            <id>editorial_sources</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>editorial_sources</view>
+            </views>
+        </group>
+        <group>
+            <id>editorial_tasks</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>editorial_tasks</view>
+            </views>
+        </group>
+        <group>
+            <id>editorial_collection_proposals</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>editorial_collection_proposals</view>
+            </views>
+        </group>
+        <group>
+            <id>editorial_sidebar</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>editorial_sidebar</view>
+            </views>
+        </group>
+        <group>
+            <id>editorial_collections</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>editorial_collections</view>
+            </views>
+        </group>
+        <group>
+            <id>editorial_sidebar_required</id>
+            <rendering>angular</rendering>
+            <views>
+                <view>editorial_sidebar_required</view>
+            </views>
+        </group>
+    </groups>
+    <lists>
+        <list>
+            <id>search</id>
+            <columns>
+                <column>cclom:title</column>
+                <column>ccm:commonlicense_key</column>
+                <column>ccm:oeh_lrt</column>
+                <column>cm:modified</column>
+            </columns>
+        </list>
+        <list>
+            <id>collectionReferences</id>
+            <columns>
+                <column>cclom:title</column>
+                <column>ccm:commonlicense_key</column>
+                <column>ccm:oeh_lrt</column>
+                <column>cm:modified</column>
+            </columns>
+        </list>
+    </lists>
+    <templates>
+        <template>
+            <!-- <ccm:editorial_checklist type="checkboxVertical"> -->
+            <id>search</id>
+            <html><![CDATA[
+		  <virtual:editorial_filter style="display:none">
+		  <virtual:time_after_created>
+		  <virtual:time_after_modified>
+		  <ccm:taxonid>
+		  <ccm:educationalcontext type="facetList">
+		  <ccm:educationalintendedenduserrole type="facetList">
+		  <ccm:oeh_publisher_combined type="multivalueSuggestBadges">
+		  <cclom:general_keyword>
+		  <license>
+          <!-- for kita context -->
+          <virtual:kita_search style="display:none">
+		]]></html>
+        </template>
+        <template>
+            <id>editorial_search</id>
+            <html><![CDATA[
+			<h4 class="wlo-caption">Inhaltemengen filtern</h4>
+		  <virtual:editorial_status>
+		  <ccm:editorial_checklist>
+		  <ccm:taxonid>
+    	  <ccm:oeh_publisher_combined type="multivalueSuggestBadges">
+	      <virtual:editorial_filter>
+		  <virtual:time_after_created isExtended="true">
+		  <hr>
+		  <!-- <h4 class="wlo-caption">Redaktioneller Handlungsbedarf</h4> -->
+	      <virtual:editorial_exclusion caption="Redaktioneller Handlungsbedarf">
+	      <ccm:oeh_widgets caption="Widget-Typ" bottomCaption="Alte WLO-Widget-Typen durchsuchen" isExtended="true">
+		  <ccm:author_freetext caption="Autorangabe durchsuchen" isExtended="true">
+		  <hr>
+		  <h4 class="wlo-caption">Suchfilter</h4>
+		  <virtual:editorial_title caption="Vollen Titel durchsuchen" placeholder="" bottomCaption="">
+		  <virtual:editorial_license>
+		  <ccm:oeh_lrt required="optional">
+		  <virtual:editorial_file_type>
+
+
+		  <virtual:editorial_edit_type style="display:none;">
+
+
+
+		  <cclom:general_description caption="Beschreibung durchsuchen" placeholder="" isExtended="true">
+		  <ccm:wwwurl isExtended="true">
+		  <ccm:educationalcontext isExtended="true">
+		  <ccm:educationalintendedenduserrole isExtended="true">
+		  <cclom:general_keyword isExtended="true">
+		  <cclom:classification_keyword isExtended="true">
+		  <virtual:author caption="Meine Inhalte" style="display:none">
+
+		  <!-- for internal calls! -->
+          <virtual:collection_id style="display:none">
+		  <!-- for internal calls! -->
+          <virtual:collection_id_primary style="display:none">
+          <!-- for internal calls! -->
+          <virtual:collection_id_tree style="display:none">
+
+		]]></html>
+        </template>
+        <template>
+            <id>editorial_collection_proposals</id>
+            <html><![CDATA[
+		  <ccm:taxonid>
+		  <ccm:collection_proposal_status>
+          <!-- for internal calls! -->
+          <virtual:collection_id style="display:none">		]]></html>
+        </template>
+        <template>
+            <id>editorial_sources</id>
+            <html><![CDATA[
+          <ccm:oeh_lrt style="display:block">
+		  <ccm:editorial_checklist type="checkboxVertical">
+		  <virtual:editorial_filter>
+		  <virtual:time_after_created>
+		  <ccm:taxonid isExtended="true">
+		  <ccm:educationalcontext isExtended="true">
+		  <ccm:educationalintendedenduserrole isExtended="true">
+		  <cclom:general_keyword isExtended="true">
+		]]></html>
+        </template>
+        <template>
+            <id>editorial_tasks</id>
+            <html><![CDATA[
+          <virtual:search_tasks>
+		]]></html>
+        </template>
+        <template>
+            <id>editorial_sidebar</id>
+            <html><![CDATA[
+		  <ccm:oeh_lrt style="display:none">
+		  <ccm:general_identifier style="display:none">
+		  <ccm:editorial_checklist type="singleoption" isExtended="false">
+		]]></html>
+        </template>
+        <template>
+            <id>wlo_upload_dummy</id>
+            <html><![CDATA[
+				<style>
+					/* wlo button style */
+					/*! CSS Used from: https://dev.wirlernenonline.de/wp-content/themes/wir-lernen-online/dist/assets/scss/wlo.css?ver=20200821 ; media=all */
+					@media all{
+						.wlo-button:hover{background:#B4DA1C;}
+						.wlo-button{display:flex;justify-content:center;align-items:center;height:30px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;padding:0 1.5em;margin:1em auto;background:#e4f700;color:#032850;font-family:"Montserrat-Bold", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;font-size:14px;border-radius:15px;transition:0.3s;}
+					}
+				/*! CSS Used from: Embedded */
+					.wlo-button{margin:1em;cursor:pointer;}
+
+					.wlo-button {
+						border: none;
+						font-weight: bold;
+					}
+				/* wlo button style end */
+
+					body{
+						background: none!important;
+						overflow-y: hidden!important;
+						padding: 0 25px;
+					}
+					.mat-form-field-label, .mat-hint{
+						color: rgba(0,0,0,.9)!important;
+					}
+					.mat-form-field-appearance-outline .mat-form-field-outline{
+						color: rgba(0,0,0,.3)!important;
+					}
+					input.mat-input-element::placeholder,
+					.mat-select-placeholder,
+					textarea.mat-input-element::placeholder{
+						color: rgba(0,0,0,.7)!important;
+					}
+					.mat-form-field .mat-button-select-arrow{
+						/*background-color: #f4f4f4!important;*/
+					}
+					#wlo_upload_content_header{
+						display:none;
+					}
+					es-mds-editor-view h3.heading {
+						background-color: transparent;
+					}
+					.mds-editor-view-wlo_upload_content_extended > div,
+					.mds-editor-view-wlo_upload_tool_extended > div,
+					.mds-editor-view-wlo_upload_source_extended > div{
+						background-color: #f7f7f7;
+						margin-bottom:15px;
+						border-radius: 0 0 8px 8px;
+					}
+					.mds-editor-view-wlo_upload_content_extended .content,
+					.mds-editor-view-wlo_upload_tool_extended .content,
+					.mds-editor-view-wlo_upload_source_extended .content{
+						padding-left: 5px;
+						padding-right: 5px;
+					}
+					.mds-editor-view-wlo_upload_content_extended .content > div:first-child {
+						padding-top: 30px;
+					}
+					.mds-editor-view-wlo_upload_content_extended,
+					.mds-editor-view-wlo_upload_tool_extended,
+					.mds-editor-view-wlo_upload_source_extended {
+					    max-width: calc(100% - 15px);
+						margin: auto;
+					}
+					.data-privacy {
+						padding: 15px 30px 0 30px;
+					}
+					.data-privacy .privacy-hint {
+						font-size: 75%;
+						color: #777;
+						padding: 0 0px;
+					}
+
+					.newsletter{
+						display:flex;
+						/*margin: auto;*/
+						padding: 25px 20px 0 40px;
+					}
+					.newsletter > * {
+					    display:flex;
+					    align-items:center;
+					    justify-content:center;
+						flex-grow:1;
+						width: 0;
+					}
+					.newsletter .mat-form-field{
+						min-width: 150px;
+					}
+					.newsletter es-mds-editor-widget-text,
+					.newsletter es-mds-editor-widget-checkbox,
+					.newsletter es-mds-editor-widget-container > div {
+						width: 100%;
+						padding: 0 10px;
+					}
+					.newsletter es-mds-editor-widget-container {
+					    display: flex;
+					    width: 100%;
+						align-items:center;
+					    justify-content:center;
+					}
+					h2{
+						font-size: 200%;
+						font-weight: bold;
+						margin: 25px;
+					}
+					@media screen and (max-width:700px) {
+						body {
+							padding: 0 5px;
+						}
+						h2 {
+							font-size: 130%;
+						}
+						.newsletter {
+							flex-direction: column;
+							padding: 25px 0 0 0;
+						}
+						.newsletter > * {
+							width: auto;
+						}
+						.data-privacy {
+							padding: 15px 0 0 0;
+						}
+					}
+					h3.heading{
+						border-radius: 8px 8px 0 0;
+						font-weight: normal;
+						margin-top: 6px;
+						margin-bottom: 0;
+					}
+					h3.heading >i{
+						display:none;
+					}
+					h3.heading > span:after{
+						/*content: '(je mehr Informationen du angibst, desto besser ist dein Inhalt später auffindbar)';
+						font-weight: normal;
+						font-size: 80%;
+						padding-left: 7px;*/
+					}
+					label, .mat-form-field label, .mat-checkbox label{
+						font-weight: bold;
+					}
+					.newsletter app-mds-editor-widget-checkbox app-mds-editor-widget-container{
+						padding-top: 20px;
+					}
+					.wlo-heading {
+						color:#333;
+						text-align: center;
+						text-transform: uppercase;
+						font-weight: bold;
+						font-size: 120%;
+						padding: 50px 0 10px 0;
+						width: 100%;
+						margin-bottom: 20px;
+						border-bottom: 1px solid #bdbdbd;
+					}
+					.wlo-line {
+						width: 100%;
+						height: 0;
+						margin-bottom: 24px;
+						border-bottom: 1px solid #bdbdbd;
+					}
+					.wlo-side-by-side{
+						display:flex;
+					}
+					.wlo-side-by-side > div {
+						width: 0;
+						flex-grow: 1;
+					}
+					app-mds-editor-view app-mds-editor-widget-container {
+						margin: 0.75em 2em!important;
+					}
+					.wlo-label{
+						margin: 0.25em 2em;
+					}
+					.wlo-label .required{
+						color: #800;
+					}
+					.widget-form-field-cclom-general_description textarea{
+						min-height: 53px;
+					}
+					.widget-form-field-cclom-general_keyword{
+						margin-bottom: 10px;
+					}
+					.dropArea{
+						margin: 0 10%;
+					}
+				</style>]]>
+            </html>
+        </template>
+        <template>
+            <id>wlo_upload_newsletter</id>
+            <html><![CDATA[
+			<div class="newsletter">
+			  <virtual:email>
+			  <virtual:newsletter>
+		    </div>
+			<div class="data-privacy">
+			<virtual:data_privacy>
+			  <div class="privacy-hint">
+			    Indem du uns deine E-Mailadresse sendest, erklärst du dich damit einverstanden, dass WirLernenOnline.de die Adresse speichert und für die Bearbeitung und Dokumentation deines Inhaltevorschlags nutzt.<br><br>
+				Indem du dich zum Newsletter anmeldest, erklärst du dich damit einverstanden dass WirLernenOnline.de deine Adresse in einer Newslettersoftware verwendet, um dir regelmäßig Neuigkeiten zu senden.<br><br>
+				Du kannst diese Einwilligung jederzeit bei redaktion@wirlernenonline.de widerrufen. Nähere Hinweise zu unserer Datenverarbeitung findest du auf unserer Datenschutz-Seite.
+			  </div>
+			</div>
+			<div style="display:flex;justify-content:flex-end;">
+				<button class="wlo-button" id="form_submit" onclick="{
+				const btn = this;
+				btn.disabled = true;
+				window.ngEmbed.mdsRef.getValues().then((mds) => {
+					console.log(mds);
+					if(!mds){
+						btn.disabled = false;
+						alert('Bitte fügen Sie eine Datei/Link hinzu und geben dem Inhalt einen Titel.');
+						return;
+					}
+					const size = mds['fileupload-filedata'] ? mds['fileupload-filedata'][0].length * 0.768 : 0;
+					console.log(size / 1024 / 1024);
+					if((mds['virtual:data_privacy'][0] === 'false')){
+						btn.disabled = false;
+						alert('Bitte die Datenschutzhinweise bestätigen');
+						return;
+					}
+					if((!mds['ccm:wwwurl'] && !mds['fileupload-link']) && !size || size > 1024*1024*100){
+						btn.disabled = false;
+						alert('Die Größe von Dateien ist aktuell auf 100MB begrenzt');
+						return;
+					}
+					window.ngEmbed.onEvent('PARENT_FETCH_DATA', null);
+				});
+				}">Absenden</button>
+			</div>
+			<script>
+			function test(){
+				alert('test');
+			}
+			document.getElementById('form_submit').addEventListener(' test;
+			</script>
+				]]></html>
+        </template>
+        <template>
+            <id>wlo_upload_content</id>
+            <html><![CDATA[
+			  <h2>Welchen Inhalt möchtest du mit der Community teilen?</h2>
+			  <label class="wlo-label">Datei hinzufügen <span class="required">*</span></label>
+			  <fileupload>
+			  <div style="height:20px;"></div>
+			  <cclom:title>
+				]]></html>
+        </template>
+        <template>
+            <id>wlo_upload_content_extended</id>
+            <caption>Ich weiß noch mehr darüber</caption>
+            <extended>true</extended>
+            <html><![CDATA[
+			  <ccm:oeh_lrt required="optional">
+			  <ccm:curriculum>
+			  <!--<div class="wlo-line"></div>-->
+				<ccm:custom_license>
+				<ccm:author_freetext caption="Autor:In/Ersteller:In" type="text">
+				<cclom:general_description caption="Kurzbeschreibung" placeholder="Wie ist der Inhalt im Unterricht einsetzbar?" type="textarea">
+
+			  <!--<div class="wlo-line"></div>-->
+			  <ccm:educationalcontext caption="Bildungsstufe" placeholder="Für welche Bildungsstufe(n) ist der Inhalt geeignet?">
+			  <ccm:educationalintendedenduserrole caption="Zielgruppe" placeholder="Wer würde nach diesem Inhalt suchen?">
+			  <cclom:general_keyword caption="Schlagworte" placeholder="Gib Schlagworte ein, die zu deinem Inhalt passen">
+				]]></html>
+        </template>
+        <template>
+            <id>wlo_upload_tool</id>
+            <html><![CDATA[
+			  <h2>Welches Tool möchtest du mit der Community teilen?</h2>
+			  <ccm:wwwurl style="margin-top: 15px">
+			  <cclom:title>
+				]]></html>
+        </template>
+        <template>
+            <id>wlo_upload_source</id>
+            <html><![CDATA[
+			  <h2>Welche Quelle möchtest du mit der Community teilen?</h2>
+			  <ccm:wwwurl style="margin-top: 15px">
+			  <cclom:title>
+				]]></html>
+        </template>
+        <template>
+            <id>node_basic</id>
+            <caption>Pflichtinformationen</caption>
+            <icon>layers</icon>
+            <html><![CDATA[
+              <preview>
+              <ccm:wwwurl>
+			  <cclom:title>
+              <cclom:general_description type="textarea">
+			  <ccm:taxonid>
+			  <ccm:oeh_lrt>
+			  <ccm:oeh_widgets isExtended="true">
+			  <!--// Anbieter...-->
+			  <ccm:educationalcontext caption="Bildungsstufe">
+			  <ccm:lifecyclecontributer_author style="display:none">
+              <cclom:general_keyword>
+              <childobjects>
+			  <license>
+			  <ccm:curriculum style="display:none">
+				]]></html>
+        </template>
+        <template>
+            <id>node_type</id>
+            <caption>WLO Einordnung</caption>
+            <icon>settings</icon>
+            <html><![CDATA[
+			  <ccm:oeh_internalDocument>
+			  <ccm:editorial_checklist interactionType="None">
+			  ]]></html>
+        </template>
+        <template>
+            <id>node_description_collection</id>
+            <caption>Beschreibung</caption>
+            <icon>description</icon>
+            <html><![CDATA[
+
+			  <label>Cover / Vorschaubild</label>
+			  <preview>
+			  <br><br>
+			  <cm:title>
+			  <cm:description>
+		      <ccm:published_date isExtended="true">
+			  <cclom:general_language isExtended="true">
+			  <cclom:status isExtended="true">
+
+              <ccm:collectionshorttitle>
+              <ccm:editorial_state>
+              <cclom:location isExtended="true" interactionType="None">
+				]]></html>
+        </template>
+        <template>
+            <id>node_description</id>
+            <caption>Beschreibung</caption>
+            <icon>description</icon>
+            <html><![CDATA[
+			<style>
+			.widget-form-field-cclom-general_description textarea {
+				min-height: 10em;
+			}
+			</style>
+
+			  <label>Cover / Vorschaubild</label>
+			  <preview>
+			  <br><br>
+			  <cclom:title>
+			  <cclom:general_description>
+		      <ccm:published_date isExtended="true">
+			  <ccm:wwwurl>
+			  <version>
+			  <cclom:general_language isExtended="true">
+			  <cclom:status isExtended="true">
+              <childobjects>
+				]]></html>
+        </template>
+        <template>
+            <id>node_description_render</id>
+            <caption></caption>
+            <icon>description</icon>
+            <html><![CDATA[
+			<div class="wlo-side-by-side wlo-primary-wrap-mobile-reverse">
+			  <div>
+				  <cclom:general_description>
+				  <cclom:general_language isExtended="true">
+			  </div>
+			  <!-- TODO: Alignment on mobile not optimal -->
+			  <div class="wlo-primary-metadata">
+				<div>
+					<ccm:oeh_lrt_aggregated icon="perm_media" caption="" hideIfEmpty="false">
+				</div>
+				<div>
+					<ccm:educationalcontext icon="school" hideIfEmpty="false">
+				</div>
+				<div class="wlo-primary-wrap-mobile">
+					<ccm:oeh_publisher_combined icon="cloud" hideIfEmpty="false">
+					<ccm:published_date icon="dummy">
+				</div>
+				<div class="wlo-primary-wrap-mobile">
+					<license>
+				</div>
+			  </div>
+			</div>
+				]]></html>
+        </template>
+        <template>
+            <id>node_description_editorial_render</id>
+            <caption>Beschreibung</caption>
+            <icon>description</icon>
+            <html><![CDATA[
+			  <cclom:title>
+			  <cclom:general_description>
+			  <ccm:wwwurl>
+			  <div class="wlo-side-by-side">
+			  <cclom:general_language isExtended="true">
+			  <!-- TODO: format is broken -->
+			  <ccm:published_date>
+			  </div>
+				]]></html>
+        </template>
+        <template>
+            <id>node_description_editorial_collection_render</id>
+            <caption>Beschreibung</caption>
+            <icon>description</icon>
+            <html><![CDATA[
+			  <cm:title>
+			  <cm:description>
+			  <!-- <ccm:wwwurl> -->
+			  <div class="wlo-side-by-side">
+			  <cclom:general_language isExtended="true">
+			  <!-- TODO: format is broken -->
+			  <ccm:published_date>
+              <div class="wlo-side-by-side">
+              </div>
+              </div>
+              <ccm:collectionshorttitle>
+              <ccm:editorial_state>
+              <cclom:location isExtended="true" interactionType="None">
+				]]></html>
+        </template>
+        <template>
+            <id>node_description_bulk</id>
+            <caption>Beschreibung</caption>
+            <icon>description</icon>
+            <html><![CDATA[
+			  <cclom:title>
+			  <cclom:general_description>
+			  <cclom:status isExtended="true">
+			  <ccm:wwwurl>
+			  <cclom:general_language isExtended="true">
+			  <cclom:size interactionType="None" isExtended="true">
+				]]></html>
+        </template>
+        <template>
+            <id>node_classification</id>
+            <caption>Typisierung</caption>
+            <icon>done_all</icon>
+            <html><![CDATA[
+              <virtual:type interactionType="None" style="display:none">
+			  <ccm:oeh_lrt>
+			  <ccm:objecttype class="wlo-old-data" isExtended="true" interactionType="None">
+              <ccm:oeh_widgets class="wlo-old-data" isExtended="true" interactionType="None">
+			  <ccm:sourceContentType class="wlo-old-data" isExtended="true" interactionType="None">
+			  <ccm:toolCategory class="wlo-old-data" isExtended="true" interactionType="None">
+			  <ccm:general_identifier isExtended="true">
+
+			  <ccm:taxonid>
+			  <cclom:classification_keyword isExtended="true">
+			  <cclom:general_keyword isExtended="true">
+			  <ccm:educationalcontext>
+			  <ccm:educationaltypicalagerange required="ignore"  isExtended="true">
+			  <ccm:fskRating isExtended="true">
+			  <ccm:oeh_quality_relevancy_for_education isExtended="true">
+			  <div class="wlo-side-by-side wlo-mediatypes">
+				  <virtual:mediatype interactionType="None" isExtended="true">
+				  <cclom:format interactionType="None" hideIfEmpty="false" isExtended="true">
+			  </div>
+				]]></html>
+        </template>
+        <template>
+            <id>node_collections_render</id>
+            <caption>Redaktionell empfohlen zu folgenden Themen</caption>
+            <hideIfEmpty>true</hideIfEmpty>
+            <html><![CDATA[
+					<collections>
+				]]></html>
+        </template>
+        <template>
+            <id>node_classification_render</id>
+            <caption>Typisierung</caption>
+            <icon>done_all</icon>
+            <html><![CDATA[
+			  <ccm:oeh_lrt>
+			  <ccm:taxonid>
+			  <cclom:classification_keyword isExtended="true">
+			  <cclom:general_keyword isExtended="true">
+			  <ccm:educationalcontext>
+			  <ccm:educationaltypicalagerange required="ignore"  isExtended="true">
+			  <ccm:fskRating isExtended="true">
+			  <div class="wlo-side-by-side">
+				  <virtual:mediatype interactionType="None" isExtended="true">
+				  <cclom:format interactionType="None">
+			  </div>
+
+
+				]]></html>
+        </template>
+        <template>
+            <id>node_paedagogics</id>
+            <caption>Pädagogisches</caption>
+            <icon>school</icon>
+            <html><![CDATA[
+			<cclom:typicallearningtime isExtended="true">
+			<cclom:duration interactionType="None" isExtended="true">
+			<ccm:curriculum>
+			<ccm:educationalintendedenduserrole>
+			<ccm:oeh_competence_requirements isExtended="true">
+			<div style="display:flex; justify-content: center;">
+				<ccm:oeh_languageTarget style="flex-grow:3 padding: 0 10px;" isExtended="true">
+				<ccm:oeh_languageLevel style="flex-grow:7; padding: 0 10px;" isExtended="true" bottomCaption="Sprachniveaustufen nach den europäischen Referenzrahmen">
+			</div>
+			<ccm:competence isExtended="true">
+			<ccm:oeh_competence_check isExtended="true">
+				]]></html>
+        </template>
+        <template>
+            <id>node_paedagogics_render</id>
+            <caption>Pädagogisches</caption>
+            <icon>school</icon>
+            <html><![CDATA[
+			<div class="wlo-side-by-side">
+				<cclom:typicallearningtime isExtended="true">
+				<cclom:duration interactionType="None" isExtended="true" icon="schedule">
+			</div>
+			<ccm:curriculum>
+			<ccm:educationalintendedenduserrole>
+			<ccm:oeh_competence_requirements isExtended="true">
+			<div style="display:flex; justify-content: center;">
+				<ccm:oeh_languageTarget caption="Sprachniveau für:" style="flex-grow:3 padding: 0 10px;" isExtended="true">
+				<ccm:oeh_languageLevel style="flex-grow:7; padding: 0 10px;" isExtended="true" bottomCaption="Sprachniveaustufen nach den europäischen Referenzrahmen">
+			</div>
+			<ccm:competence isExtended="true">
+			<ccm:oeh_competence_check isExtended="true">
+				]]></html>
+        </template>
+        <template>
+            <id>node_paedagogics_editorial_render</id>
+            <caption>Pädagogisches</caption>
+            <icon>school</icon>
+            <html><![CDATA[
+			<div class="wlo-side-by-side">
+				<cclom:typicallearningtime isExtended="true">
+				<cclom:duration interactionType="None" isExtended="true" icon="schedule">
+			</div>
+			<ccm:curriculum>
+			<hr>
+			<h3 class="wlo-caption">Zielgruppe</h3>
+			<ccm:educationalintendedenduserrole>
+			<ccm:oeh_competence_requirements isExtended="true">
+			<div style="display:flex; justify-content: center;">
+				<ccm:oeh_languageTarget caption="Sprachniveau für:" style="flex-grow:3 padding: 0 10px;" isExtended="true">
+				<ccm:oeh_languageLevel style="flex-grow:7; padding: 0 10px;" isExtended="true" bottomCaption="Sprachniveaustufen nach den europäischen Referenzrahmen">
+			</div>
+			<ccm:competence isExtended="true">
+			<ccm:oeh_competence_check isExtended="true">
+				]]></html>
+        </template>
+        <template>
+            <id>node_quality</id>
+            <caption>Rechtliche Unauffälligkeit</caption>
+            <icon>lock</icon>
+            <html><![CDATA[
+			<ccm:oeh_quality_criminal_law isExtended="true">
+			<ccm:oeh_quality_copyright_law isExtended="true">
+			<ccm:oeh_quality_protection_of_minors isExtended="true">
+			<ccm:oeh_quality_personal_law isExtended="true">
+			<ccm:oeh_quality_data_privacy isExtended="true">
+				]]></html>
+        </template>
+        <template>
+            <id>node_quality_render</id>
+            <caption>Zugänglichkeit / Qualität</caption>
+            <icon>lock</icon>
+            <html><![CDATA[
+			<ccm:price isExtended="true">
+			<ccm:oeh_quality_login isExtended="true">
+			<div class="wlo-detais" style="padding:15px 14px;display:flex;align-items:flex-start;flex-direction:column;">
+				<span style="font-size:125%;padding-bottom:5px;">Weitere Informationen zur Qualität findest du auf unserer Qualitätsseite</span>
+				<a class="btn" href="https://wirlernenonline.de/qualitaetssicherung/" target="_BLANK">Mehr erfahren</a>
+			</div>
+				]]></html>
+        </template>
+        <template>
+            <id>node_quality2</id>
+            <caption>Qualität</caption>
+            <icon>star</icon>
+            <html><![CDATA[
+			<ccm:oeh_quality_correctness isExtended="true">
+			<ccm:oeh_quality_currentness isExtended="true">
+			<ccm:oeh_quality_neutralness isExtended="true">
+			<ccm:oeh_quality_language isExtended="true">
+			<ccm:oeh_quality_medial isExtended="true">
+			<ccm:oeh_quality_didactics isExtended="true">
+			<ccm:oeh_quality_transparentness isExtended="true">
+				]]></html>
+        </template>
+        <template>
+            <id>node_accessibility</id>
+            <caption>Zugänglichkeit</caption>
+            <icon>accessibility</icon>
+            <html><![CDATA[
+			  <ccm:license_to interactionType="None" isExtended="true" hideIfEmpty="false">
+			  <ccm:oeh_accessibility_open isExtended="true">
+			  <ccm:oeh_interoperability isExtended="true">
+			  <ccm:containsAdvertisement isExtended="true">
+			  <ccm:price isExtended="true">
+			  <ccm:oeh_quality_login isExtended="true">
+		      <ccm:conditionsOfAccess isExtended="true">
+			  <ccm:accessibilitySummary isExtended="true">
+			  <ccm:oeh_usability isExtended="true">
+			  <ccm:oeh_accessibility_security isExtended="true">
+			  <ccm:oeh_accessibility_find isExtended="true">
+			  ]]></html>
+        </template>
+        <template>
+            <id>node_license</id>
+            <caption>Lizenz, Quelle, Mitwirkende</caption>
+            <icon>copyright</icon>
+            <html><![CDATA[
+			  <license>
+			  <ccm:author_freetext>
+			  <div style="background-color:#f8f8f8;margin: 10px -25px 30px -25px;overflow: hidden;padding: 20px 35px">
+				  <div style="display:flex;align-items:center;">
+					<h5 class="wlo-caption" style="flex-grow: 1">Herausgeber</h3>
+					<contributor button="mat-flat-button" style="height:35px">
+				  </div>
+				  <ccm:lifecyclecontributer_publisher interactionType="None" caption="">
+				  <!-- dummy for dynamic property checks -->
+				  <ccm:replicationsourceid style="display:none">
+				  <ccm:oeh_publisher_combined>
+					<label style="flex-grow: 1">Autor*innen und weitere Beteiligte</label>
+					<br><br>
+					<ccm:lifecyclecontributer_author interactionType="None" hideIfEmpty="false">
+					<ccm:lifecyclecontributer_unknown interactionType="None">
+					<ccm:lifecyclecontributer_initiator interactionType="None">
+					<ccm:lifecyclecontributer_terminator interactionType="None">
+					<ccm:lifecyclecontributer_validator interactionType="None">
+					<ccm:lifecyclecontributer_editor interactionType="None">
+					<ccm:lifecyclecontributer_graphical_designer interactionType="None">
+					<ccm:lifecyclecontributer_technical_implementer interactionType="None">
+					<ccm:lifecyclecontributer_content_provider interactionType="None">
+					<ccm:lifecyclecontributer_educational_validator interactionType="None">
+					<ccm:lifecyclecontributer_script_writer interactionType="None">
+					<ccm:lifecyclecontributer_instructional_designer interactionType="None">
+					<ccm:lifecyclecontributer_subject_matter_expert interactionType="None">
+              </div>
+			  ]]></html>
+        </template>
+        <template>
+            <id>node_license_render</id>
+            <caption>Lizenz, Quelle, Mitwirkende</caption>
+            <icon>copyright</icon>
+            <html><![CDATA[
+			  <license>
+			  <ccm:author_freetext>
+              <ccm:oeh_publisher_combined>
+			  <div style="background-color:#f8f8f8;margin: 36px 0 30px 0;overflow: hidden;padding: 20px 5px">
+			  <div style="display:flex;align-items:center;" class="wlo-contributor-heading">
+				<h2 class="mdsCaption" style="flex-grow: 1;border: none!important;margin-top: 0;">Autor*innen und weitere Beteiligte</h2>
+					<contributor button="mat-flat-button" style="height:25px">
+				</div>
+                <ccm:lifecyclecontributer_author interactionType="None" hideIfEmpty="false">
+                <ccm:lifecyclecontributer_unknown interactionType="None">
+                <ccm:lifecyclecontributer_initiator interactionType="None">
+                <ccm:lifecyclecontributer_terminator interactionType="None">
+                <ccm:lifecyclecontributer_validator interactionType="None">
+                <ccm:lifecyclecontributer_editor interactionType="None">
+                <ccm:lifecyclecontributer_graphical_designer interactionType="None">
+                <ccm:lifecyclecontributer_technical_implementer interactionType="None">
+                <ccm:lifecyclecontributer_content_provider interactionType="None">
+                <ccm:lifecyclecontributer_educational_validator interactionType="None">
+                <ccm:lifecyclecontributer_script_writer interactionType="None">
+                <ccm:lifecyclecontributer_instructional_designer interactionType="None">
+                <ccm:lifecyclecontributer_subject_matter_expert interactionType="None">
+              </div>
+			  ]]></html>
+        </template>
+        <template>
+            <id>node_license_bulk</id>
+            <caption>Lizenz, Urheber, Veröffentlichungs-informationen</caption>
+            <icon>copyright</icon>
+            <html><![CDATA[
+				<license>
+				<ccm:author_freetext>
+				 <!-- dummy for dynamic property checks -->
+				<ccm:replicationsourceid style="display:none">
+			    <ccm:oeh_publisher_combined>
+				<ccm:published_date>
+			  ]]></html>
+        </template>
+        <template>
+            <id>node_license_dummy</id>
+            <caption>Lizenz, Urheber, Veröffentlichungs-informationen</caption>
+            <icon>copyright</icon>
+            <html><![CDATA[
+			<!-- dummy to prevent hiding -->
+			<license>
+			<div style="display:flex; justify-content:center;">
+			<contributor>
+			</div>
+			  ]]></html>
+        </template>
+        <template>
+            <id>node_identify</id>
+            <caption>Identifier, Versionen</caption>
+            <icon>fingerprint</icon>
+            <html><![CDATA[
+			<div class="wlo-side-by-side">
+			  <cm:created interactionType="None" isExtended="true">
+			  <cclom:version interactionType="None" isExtended="true">
+			  <cm:modified interactionType="None" isExtended="true">
+		     </div>
+			  <sys:node-uuid interactionType="None" isExtended="true" caption="ID WLO">
+			  <ccm:oeh_signatures isExtended="true">
+			  ]]></html>
+        </template>
+        <template>
+            <id>node_identify_render</id>
+            <caption>Identifier, Version</caption>
+            <icon>fingerprint</icon>
+            <html><![CDATA[
+			<!-- TODO: Does not display -->
+			<div style="display:flex;justify-content: space-around;">
+				<cm:created interactionType="None">
+				<cclom:version interactionType="None">
+				<cm:modified interactionType="None">
+				</div>
+			  <ccm:published_handle_id hideIfEmpty="false" interactionType="None">
+			  <sys:node-uuid interactionType="None">
+			  <ccm:oeh_signatures isExtended="true">
+			  ]]></html>
+        </template>
+        <template>
+            <id>node_usage</id>
+            <caption>Nutzung, Nutzenden-Bewertung</caption>
+            <hideIfEmpty>false</hideIfEmpty>
+            <icon>equalizer</icon>
+            <html><![CDATA[
+			<!-- dummy to prevent hiding -->
+			<sys:node-uuid interactionType="None" style="display:none" isExtended="true">
+			  ]]></html>
+        </template>
+        <template>
+            <id>node_index</id>
+            <caption>Erschließung, Kuratierung</caption>
+            <icon>group</icon>
+            <html><![CDATA[
+			<div style="background-color:#f8f8f8;margin: 10px -25px 30px -25px;overflow: hidden;padding: 20px 35px">
+				<div style="display:flex;align-items:center;">
+					<label style="flex-grow: 1">Beteiligte an Metadaten</label>
+					<contributor button="mat-flat-button" style="height:35px">
+				</div>
+				<br><br>
+				<ccm:metadatacontributer_creator interactionType="None">
+				<ccm:metadatacontributer_validator interactionType="None">
+				<ccm:metadatacontributer_provider interactionType="None">
+			</div>
+			  ]]></html>
+        </template>
+        <template>
+            <id>node_index_render</id>
+            <caption>Erschließung, Kuratierung</caption>
+            <icon>group</icon>
+            <html><![CDATA[
+			<div style="background-color:#f8f8f8;margin: 36px 0 30px 0;overflow: hidden;padding: 20px 5px">
+			<div style="display:flex;align-items:center;" class="wlo-contributor-heading">
+				<h2 class="mdsCaption" style="flex-grow: 1;border: none!important;margin-top: 0;">Beteiligte an Metadaten</h2>
+				<contributor button="mat-flat-button" style="height:25px">
+			</div>
+				<ccm:metadatacontributer_creator interactionType="None">
+				<ccm:metadatacontributer_validator interactionType="None">
+				<ccm:metadatacontributer_provider interactionType="None">
+			</div>
+			  ]]></html>
+        </template>
+        <template>
+            <id>node_basic_render</id>
+            <caption>Pflichtinformationen</caption>
+            <icon>layers</icon>
+            <html><![CDATA[
+			  <ccm:objecttype caption="Kategorie des Objekts" hideIfEmpty="false">
+              <ccm:wwwurl hideIfEmpty="false">
+			  <cclom:title hideIfEmpty="false">
+              <cclom:general_description type="textarea" hideIfEmpty="false">
+			  <ccm:taxonid hideIfEmpty="false">
+			  <ccm:oeh_lrt hideIfEmpty="false">
+			  <ccm:educationalcontext caption="Bildungsstufe" hideIfEmpty="false">
+              <cclom:general_keyword>
+				]]></html>
+        </template>
+        <template>
+            <id>node_extended</id>
+            <caption>Erweiterte Infos allgemein</caption>
+            <icon>description</icon>
+            <extended>true</extended>
+            <html><![CDATA[
+				<ccm:educationalintendedenduserrole>
+			    <ccm:educationallearningresourcetype caption="Materialart">
+				<ccm:oeh_languageLevel>
+				<ccm:conditionsOfAccess>
+				<ccm:containsAdvertisement>
+				<ccm:price>
+				<ccm:accessibilitySummary>
+				<ccm:notes caption="Notizen (intern)">
+				<cm:name caption="Dateiname (intern)">
+				]]></html>
+        </template>
+        <template>
+            <id>node_extended_render</id>
+            <caption>Erweiterte Infos allgemein</caption>
+            <icon>description</icon>
+            <extended>true</extended>
+            <html><![CDATA[
+				<ccm:educationalintendedenduserrole hideIfEmpty="false">
+			    <ccm:educationallearningresourcetype caption="Materialart" hideIfEmpty="false">
+				<ccm:oeh_languageLevel hideIfEmpty="false">
+				<ccm:conditionsOfAccess hideIfEmpty="false">
+				<ccm:containsAdvertisement hideIfEmpty="false">
+				<ccm:price hideIfEmpty="false">
+				<ccm:accessibilitySummary hideIfEmpty="false">
+				<ccm:notes caption="Notizen (intern)" hideIfEmpty="false">
+				<cm:name caption="Dateiname (intern)" hideIfEmpty="false">
+				<ccm:editorial_checklist hideIfEmpty="false">
+				]]></html>
+        </template>
+        <template>
+            <id>node_extended_specific</id>
+            <caption>Erweiterte Infos spezifisch</caption>
+            <icon>add</icon>
+            <extended>true</extended>
+            <html><![CDATA[
+                <ccm:editorial_checklist style="display:none">
+				<ccm:sourceContentType caption="Quelle: Art der Quelle" bottomCaption="">
+				<ccm:pointsdefault>
+				<ccm:license_oer caption="Quelle: Nutzungsrechte" bottomCaption="">
+				<ccm:general_identifier caption="Quelle: Interner Name" bottomCaption="">
+				<!--// Tool: Technische Anforderungen-->
+				<ccm:toolCategory caption="Tool: Art des Tools" bottomCaption="">
+				<!--// Tool: Status-->
+				]]></html>
+        </template>
+        <template>
+            <id>node_extended_specific_render</id>
+            <caption>Erweiterte Infos spezifisch</caption>
+            <hideIfEmpty>true</hideIfEmpty>
+            <icon>add</icon>
+            <extended>true</extended>
+            <html><![CDATA[
+				<ccm:sourceContentType caption="Quelle: Art der Quelle" bottomCaption="" hideIfEmpty="false">
+				<ccm:pointsdefault>
+				<ccm:license_oer caption="Quelle: Nutzungsrechte" bottomCaption="">
+				<ccm:general_identifier caption="Quelle: Interner Name" bottomCaption="" hideIfEmpty="false">
+				<ccm:toolCategory caption="Tool: Art des Tools" bottomCaption="" hideIfEmpty="false">
+				]]></html>
+        </template>
+        <template>
+            <id>node_general</id>
+            <caption>dialog_upload_tab_basic</caption>
+            <icon>description</icon>
+            <html><![CDATA[
+              <preview>
+              <ccm:wwwurl>
+              <cm:name extended="true">
+              <cclom:title>
+              <cclom:general_keyword extended="true">
+              <cclom:general_description type="textarea" extended="true">
+              <ccm:objecttype extended="true">
+			  <ccm:taxonid extended="true">
+			  <ccm:curriculum extended="true">
+			  <ccm:educationalintendedenduserrole extended="true">
+			  <ccm:educationalcontext extended="true">
+			  <ccm:educationallearningresourcetype extended="true">
+			  <ccm:sourceContentType extended="true">
+			  <ccm:toolCategory extended="true">
+			  <ccm:oeh_teachingMethods>
+			  <ccm:oeh_digitalCompetencies>
+			  <childobjects>
+              <license extended="true">
+				]]></html>
+        </template>
+        <template>
+            <id>node_general_render</id>
+            <caption>dialog_upload_tab_basic</caption>
+            <icon>description</icon>
+            <html><![CDATA[
+              <cm:name>
+              <cclom:title>
+              <cclom:general_keyword>
+              <cclom:general_description>
+			  <ccm:taxonid>
+			  <ccm:educationalintendedenduserrole>
+			  <ccm:educationalcontext>
+			  <ccm:curriculum caption="Fach & Thema">
+			  <ccm:educationallearningresourcetype>
+			  <ccm:sourceContentType>
+              <ccm:pointsdefault>
+			  <ccm:toolCategory>
+				]]></html>
+        </template>
+        <template>
+            <id>node_general_simple</id>
+            <caption>dialog_upload_tab_basic</caption>
+            <icon>description</icon>
+            <html><![CDATA[
+              <ccm:oeh_lrt>
+              <cclom:title>
+              <ccm:oeh_languageLevel>
+				]]></html>
+        </template>
+        <template>
+            <id>node_wlo</id>
+            <caption>Themenportal</caption>
+            <icon>layers</icon>
+            <html><![CDATA[
+                <ccm:oeh_lrt>
+				<div style="display:flex">
+					<ccm:oeh_languageTarget>
+					<ccm:oeh_languageLevel>
+				</div>
+                <ccm:editorial_checklist>
+				]]></html>
+        </template>
+        <template>
+            <id>collection_editorial</id>
+            <caption />
+            <html><![CDATA[
+						<style>
+						.cclom_location input{
+							opacity:0.5;
+						}
+						</style>
+				      <ccm:collectionshorttitle>
+				      <ccm:taxonid>
+                      <cclom:general_keyword caption="Freie Schlagworte / Stichworte">
+					  <ccm:educationalcontext caption="Sammlung ist auf folgende Bildungsstufe(n) beschränkt" isExtended="true">
+					  <ccm:educationalintendedenduserrole caption="Sammlung ist auf folgende Zielgruppe(n) beschränkt" isExtended="true">
+
+					  <ccm:editorial_state>
+					  <cclom:location isExtended="true">
+
+				]]></html>
+        </template>
+        <template>
+            <id>editorial_sidebar_required</id>
+            <caption />
+            <html><![CDATA[
+				<!-- required -->
+				<cclom:title>
+				<ccm:wwwurl>
+				<ccm:oeh_lrt>
+				<ccm:commonlicense_key>
+				<ccm:taxonid>
+				<ccm:replicationsourceid>
+				<ccm:oeh_publisher_combined>
+
+				<!-- for collections -->
+				<cclom:general_description>
+				<ccm:educationalcontext>
+				<ccm:educationalintendedenduserrole>
+
+				]]></html>
+        </template>
+        <template>
+            <id>collection_sidebar</id>
+            <html><![CDATA[
+					<cm:description>
+					<ccm:taxonid>
+					<ccm:educationalintendedenduserrole>
+					<ccm:educationalcontext>
+					<cclom:general_keyword hideIfEmpty="true">
+					<cclom:location bottomCaption="">
+				]]></html>
+        </template>
+        <template>
+            <id>editorial_collections</id>
+            <caption />
+            <html><![CDATA[
+						<style>
+						.cclom_location input{
+							opacity:0.5;
+						}
+						</style>
+                      <virtual:collection_public>
+                      <virtual:collection_missing>
+                      <virtual:collection_id style="display:none">
+				]]></html>
+        </template>
+        <template>
+            <id>node_childobject</id>
+            <caption>dialog_upload_tab_basic</caption>
+            <icon>description</icon>
+            <html><![CDATA[
+              <ccm:wwwurl>
+              <cm:name>
+              <cclom:title>
+              <cclom:general_description>
+			  <ccm:oeh_lrt>
+              <author>
+				]]>
+            </html>
+        </template>
+    </templates>
+    <queries>
+        <query join="AND" id="ngsearch">
+            <basequery>@cm\:edu_metadataset:"mds_oeh" AND ISNULL:@ccm\:tool_category</basequery>
+            <property name="ccm:editorial_state">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="ccm:editorial_checklist">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+                <statement value="0">@ccm\:editorial_checklist:"0" OR ISUNSET:"ccm:editorial_checklist"</statement>
+            </property>
+            <property name="virtual:editorial_filter">
+                <statement value="off">TYPE:"ccm:io"</statement>
+                <statement value="form">PATH:"/app:company_home/ccm:EDU_SHARED/ccm:WLO-Uploadmanager/ccm:Uploads//*"</statement>
+                <statement value="from_team">NOT PATH:"/app:company_home/ccm:EDU_SHARED/ccm:WLO-Uploadmanager/ccm:Uploads//*" AND (ISNULL:"ccm:replicationsource" OR ISUNSET:"ccm:replicationsource")</statement>
+                <statement value="from_crawler">@ccm\:replicationsource:"*"</statement>
+            </property>
+            <property name="virtual:time_after_created">
+                <statement>@cm\:created:[${value} TO NOW]</statement>
+            </property>
+            <property name="virtual:time_after_modified">
+                <statement>@cm\:modified:[${value} TO NOW]</statement>
+            </property>
+            <property name="virtual:author">
+                <statement>@cm\:creator:"${value}"</statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="ccm:oeh_lrt">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="ccm:oeh_publisher_combined">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="virtual:editorial_status"><statement>TYPE:"ccm:io"</statement></property>
+            <property name="virtual:editorial_edit_type"><statement>TYPE:"ccm:io"</statement></property>
+        </query>
+        <query join="AND" id="collection_proposals"></query>
+        <query join="AND" id="wlo_collection">
+            <basequery>ASPECT:"ccm:collection_io_reference"</basequery>
+            <property name="collection">
+                <statement>PATH:"${value}//*"</statement>
+                <preprocessor>node_path</preprocessor>
+                <mandatory>true</mandatory>
+            </property>
+        </query>
+    </queries>
+    <queries syntax="dsl">
+        <query join="AND" id="ngsearch" basequeryAsFilter="false">
+            <basequery>
+                {
+                "bool": {
+                "must": [
+                { "term": { "type": "ccm:io" } },
+                { "term": { "properties.cm:edu_metadataset.keyword": "mds_oeh" } },
+                { "term": { "nodeRef.storeRef.protocol": "workspace" } }
+                ],
+                "must_not": [
+                { "exists": { "field": "properties.ccm:tool_category" } },
+                { "term": { "aspects": "ccm:collection_io_reference" } },
+                { "term": { "aspects": "ccm:io_childobject" } }
+                ],
+                "should": [
+                {
+                "terms": {
+                "collections.properties.ccm:collectiontype.keyword": ["EDITORIAL"],
+                "boost": 1
+                }
+                }
+                ]
+                }
+                }
+            </basequery>
+            <property name="ngsearchword" asFilter="false">
+                <exactMatching>true</exactMatching>
+                <statement>
+                    {
+                    "simple_query_string" : {
+                    "query": "${value}",
+                    "fields": [
+                    "properties.cclom:title^4",
+                    "properties.cclom:general_description^2",
+                    "properties.cclom:general_keyword^2",
+                    "properties.ccm:wwwurl^2",
+                    "content.fulltext",
+                    "nodeRef.id",
+                    "i18n.de_DE.ccm:taxonid^3",
+                    "i18n.de_DE.ccm:educationallearningresourcetype^3",
+                    "i18n.de_DE.ccm:educationalcontext^3",
+                    "i18n.de_DE.ccm:educationalintendedenduserrole^3"
+                    ],
+                    "default_operator": "and"
+                    }}
+                </statement>
+            </property>
+            <property name="ccm:author_freetext" />
+            <property name="ccm:wwwurl" />
+            <property name="ccm:oeh_lrt">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="ccm:oeh_widgets">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="ccm:oeh_lrt_aggregated">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="ccm:replicationsource">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="ccm:oeh_publisher_combined">
+                <statement>{"match": {
+                    "properties.ccm:oeh_publisher_combined.keyword":"${valueRaw}"
+                    }
+                    }</statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="ccm:editorial_state">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="ccm:editorial_checklist">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+                <statement value="0">
+                    {"bool":{
+                    "should":[
+                    {"bool":
+                    {
+                    "must":[
+                    {"regexp":{"properties.ccm:objecttype.keyword":"(SOURCE|TOOL)"}}
+                    ],
+                    "should": [
+                    {"bool":{"must_not":[{"exists":{"field":"properties.ccm:editorial_checklist.keyword"}}]}},
+                    {"term":{"properties.ccm:editorial_checklist.keyword":"${value}"}}
+                    ]
+                    }
+                    },
+                    {"bool":
+                    {
+                    "must":[
+                    {"regexp":{"properties.ccm:objecttype.keyword":"(MATERIAL|^$)"}}
+                    ],
+                    "must_not": [
+                    {"match":{"permissions.read":"GROUP_EVERYONE"}},
+                    {"exists":{"field":"collections"}}
+                    ]
+                    }
+                    }
+                    ]
+                    }}
+                </statement>
+                <statement value="2">
+                    {"bool":{
+                    "should":[
+                    {"bool":
+                    {
+                    "must":[
+                    {"regexp":{"properties.ccm:objecttype.keyword":"(SOURCE|TOOL)"}},
+                    {"term":{"properties.ccm:editorial_checklist.keyword":"${value}"}}
+                    ]
+                    }
+                    },
+                    {"bool":
+                    {
+                    "must":[
+                    {"regexp":{"properties.ccm:objecttype.keyword":"(MATERIAL|^$)"}},
+                    {"match":{"permissions.read":"GROUP_EVERYONE"}}
+                    ],
+                    "must_not": [
+                    {"exists":{"field":"collections"}}
+                    ]
+                    }
+                    }
+                    ]
+                    }}
+                </statement>
+                <statement value="9">
+                    {"bool":{
+                    "should":[
+                    {"bool":
+                    {
+                    "must":[
+                    {"regexp":{"properties.ccm:oeh_lrt_aggregated.keyword":".*(2e678af3-1026-4171-b88e-3b3a915d1673|37a3ad9c-727f-4b74-bbab-27d59015c695).*"}},
+                    {"term":{"properties.ccm:editorial_checklist.keyword":"${value}"}}
+                    ]
+                    }
+                    },
+                    {"bool":
+                    {
+                    "must":[
+                    {"bool": {
+                    "must_not": [
+                    {"regexp":{"properties.ccm:oeh_lrt_aggregated.keyword":".*(2e678af3-1026-4171-b88e-3b3a915d1673|37a3ad9c-727f-4b74-bbab-27d59015c695).*"}}
+                    ]}
+                    },
+                    {"match":{"permissions.read":"GROUP_EVERYONE"}},
+                    {"exists":{"field":"collections"}}
+                    ]
+                    }
+                    }
+                    ]
+                    }}
+                </statement>
+                <statement>{"term":{"properties.ccm:editorial_checklist.keyword":"${value}"}}</statement>
+            </property>
+            <property name="virtual:editorial_status">
+                <statement value="all">
+                    {"bool": {
+                    "must_not": [
+                    {"term":{"properties.ccm:editorial_checklist.keyword": "3"}}
+                    ]}}
+                </statement>
+                <statement value="check">{"bool":{"must_not":[
+                    {"match":{"permissions.read":"GROUP_EVERYONE"}}
+                    ]
+                    }}
+                </statement>
+                <statement value="rejected">{"term":{"properties.ccm:editorial_checklist.keyword": "3"}}</statement>
+                <statement value="search">
+                    {"match":{"permissions.read":"GROUP_EVERYONE"}}
+                </statement>
+                <statement value="buffet_any">
+                    {"match":{"collections.properties.ccm:collectiontype.keyword":"EDITORIAL"}}
+                </statement>
+                <statement value="buffet_plus">
+                    {"match":{"collections.nodeRef.id":"2df69487-bf9a-4c79-937a-cd64b16ace38"}}
+                </statement>
+                <statement value="internal">
+                    {"wildcard":{"properties.ccm:oeh_internalDocument.keyword":"*"}}
+                </statement>
+            </property>
+            <property name="virtual:collection_id">
+                <statement>
+                    {"bool":{
+                    "should":[
+                    {"match":{"collections.path.keyword": "${valueRaw}"}},
+                    {"match":{"collections.nodeRef.id.keyword": "${valueRaw}"}}
+                    ]
+                    }}
+                </statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="virtual:collection_id_tree">
+                <statement>
+                    {"bool":{
+                    "should":[
+                    {"match":{"collections.path.keyword": "${valueRaw}"}},
+                    {"match":{"collections.nodeRef.id.keyword": "${valueRaw}"}}
+                    ]
+                    }}
+                </statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="virtual:collection_id_primary">
+                <statement>
+                    {"bool":{
+                    "should":[
+                    {"match":{"collections.nodeRef.id.keyword": "${valueRaw}"}}
+                    ]
+                    }}
+                </statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="virtual:editorial_edit_type">
+                <statement value="off">{ "exists": { "field": "type" } }</statement>
+                <statement value="crawler">{"bool":{
+                    "should": [
+                    {"match":{"properties.ccm:version_comment.keyword":"BULK_CREATE"}},
+                    {"match":{"properties.ccm:version_comment.keyword":"BULK_UPDATE"}},
+                    {"match":{"properties.cm:modifier.keyword":"admin"}}
+                    ]}}
+                </statement>
+                <statement value="team">
+                    {"bool":{"must_not":[
+                    {"bool":{
+                    "should": [
+                    {"match":{"properties.ccm:version_comment.keyword":"BULK_CREATE"}},
+                    {"match":{"properties.ccm:version_comment.keyword":"BULK_UPDATE"}},
+                    {"match":{"properties.cm:modifier.keyword":"admin"}}
+                    ]}}
+                    ]}}</statement>
+
+                <statement value="from_crawler">{"exists":{"field":"properties.ccm:replicationsource"}}</statement>
+            </property>
+            <property name="virtual:editorial_file_type">
+                <statement>{"bool":{
+                    "should": [
+                    {"wildcard":{"properties.ccm:ccressourcetype.keyword":"*${value}*"}},
+                    {"wildcard":{"properties.cclom:format":"*${value}*"}}
+                    ]
+                    }}
+                </statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="virtual:editorial_taxonid">
+                <multiple>true</multiple>
+                <multiplejoin>AND</multiplejoin>
+                <statement>
+                    {"match":{"properties_aggregated.ccm:taxonid":"${valueRaw}"}}
+                </statement>
+            </property>
+            <property name="virtual:editorial_replicationsource">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+                <preprocessor>alternative_id</preprocessor>
+                <statement>
+                    {"match":{"properties.ccm:replicationsource.keyword":"${value}"}}
+                </statement>
+            </property>
+            <property name="virtual:editorial_title">
+                <statement>
+                    {
+                    "simple_query_string" : {
+                    "query": "${value}*",
+                    "fields": [
+                    "properties.cclom:title^4",
+                    "properties.cm:title^2",
+                    "properties.cm:name^1"
+                    ],
+                    "default_operator": "and"
+                    }}
+                </statement>
+            </property>
+            <property name="virtual:editorial_filter">
+                <statement value="off">{ "exists": { "field": "type" } }</statement>
+                <statement value="form">{"wildcard":{"fullpath":"*/0fa24aa1-709e-4e86-8ac0-a5bbc093e6cb/*"}}</statement>
+                <statement value="from_team">{"bool":{"must_not":[{"wildcard":{"fullpath":"*/0fa24aa1-709e-4e86-8ac0-a5bbc093e6cb/*"}},{"exists":{"field":"properties.ccm:replicationsourceid"}}]}}</statement>
+                <statement value="from_crawler">{"exists":{"field":"properties.ccm:replicationsourceid"}}</statement>
+            </property>
+            <property name="virtual:kita_search">
+                <statement value="">{ "exists": { "field": "type" } }</statement>
+                <statement value="kita">{"wildcard":{"fullpath":"*/790e22a2-f5cb-4561-ac2e-e40f8adf73f4/*"}}</statement>
+            </property>
+            <property name="virtual:editorial_license">
+                <statement value="all">{ "exists": { "field": "type" } }</statement>
+                <statement value="oer">{"bool": {
+                    "should": [
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"CC_BY"}},
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"CC_BY_SA"}},
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"CC_0"}},
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"PDM"}},
+                    {"wildcard":{"properties.ccm:license_oer.keyword":"*0"}}
+                    ]
+                    }
+                    }
+                </statement>
+                <statement value="none">{"bool": {
+                    "should": [
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"NONE"}},
+                    {"bool":{"must_not":{"exists":{"field": "properties.ccm:commonlicense_key"}}}}
+                    ]
+                    }
+                    }
+                </statement>
+                <statement value="none_oer">{"bool": {
+                    "must_not": [
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"CC_BY"}},
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"CC_BY_SA"}},
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"CC_0"}},
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"PDM"}},
+                    {"wildcard":{"properties.ccm:license_oer.keyword":"*0"}}
+                    ]
+                    }
+                    }
+                </statement>
+            </property>
+
+            <property name="virtual:editorial_exclusion">
+                <multiple>true</multiple>
+                <multiplejoin>AND</multiplejoin>
+                <statement value="oer">{"bool": {
+                    "should": [
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"CC_BY"}},
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"CC_BY_SA"}},
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"CC_0"}},
+                    {"term":{"properties.ccm:commonlicense_key.keyword":"PDM"}},
+                    {"wildcard":{"properties.ccm:license_oer.keyword":"*0"}}
+                    ]
+                    }
+                    }</statement>
+                <statement value="legal">{"exists":{"field":"properties.ccm:unmetLegalCriteria"}}</statement>
+
+                <statement value="invalid_collection_elements">{"bool":
+                    {
+                    "must": [
+                    {"term":{"collections.properties.ccm:collectiontype.keyword": "EDITORIAL" }}
+                    ],
+                    "must_not": [
+                    {"term":{"permissions.read":"GROUP_EVERYONE"}}
+                    ]
+                    }
+                    }</statement>
+                <statement value="links">
+                    {"bool": {
+                    "must": [
+                    {"exists":{"field":"properties.ccm:location_status"}}
+                    ],
+                    "must_not": [
+                    {"term":{"properties.ccm:location_status.keyword": "200"}}
+                    ]
+                    }}
+                </statement>
+                location_status
+                <statement value="required">{"bool":
+                    {
+                    "should": [
+                    {"bool": {"must_not": [{"exists":{"field":"properties.cclom:title"}}]}},
+                    {"bool": {"must_not": [{"exists":{"field":"properties.ccm:commonlicense_key"}}]}},
+                    {"bool": {"must_not": [{"exists":{"field":"properties.ccm:oeh_lrt"}}]}},
+                    {"bool": {"must_not": [{"exists":{"field":"properties.ccm:taxonid"}}]}},
+                    {"bool": {"must_not": [{"exists":{"field":"properties.ccm:oeh_publisher_combined"}}]}}
+                    ]
+                    }
+                    }
+                </statement>
+                <statement value="search">{"bool":
+                    {"must_not": [
+                    {"term":{"permissions.read":"GROUP_EVERYONE"}}
+                    ]
+                    }
+                    }</statement>
+                <statement value="collection">{"bool":
+                    {"must_not": [
+                    {"exists":{"field":"collections"}}
+                    ]
+                    }
+                    }</statement>
+            </property>
+            <property name="virtual:search_tasks">
+                <mandatory>false</mandatory>
+                <statement value="metadata">{"exists":{"field":"properties.ccm:unmetLegalCriteria"}}</statement>
+                <statement value="to_me">{"bool":
+                    {"must": [
+                    {"term":{"properties.ccm:wf_receiver.keyword": "${user.cm:userName}"}}
+                    ]
+                    }
+                    }
+                </statement>
+                <statement value="from_me">{"bool":
+                    {"must": [
+                    {"wildcard":{"properties.ccm:wf_protocol.keyword": "*\"editor\":\"${user.cm:userName}\"*"}}
+                    ]
+                    }
+                    }
+                </statement>
+            </property>
+            <property name="virtual:time_after_created">
+                <statement>{"range":{"properties.cm:created":{"gte": ${value} }}}</statement>
+                <preprocessor>date_millis</preprocessor>
+            </property>
+            <property name="cclom:general_description" />
+
+            <property name="virtual:time_after_modified">
+                <statement>{"range":{"properties.cm:modified":{"gte": ${value} }}}</statement>
+                <preprocessor>date_millis</preprocessor>
+            </property>
+            <property name="cclom:classification_keyword">
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="virtual:author">
+                <statement>{"wildcard":{"properties.cm:creator.keyword":"*${value}*"}}</statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+        </query>
+        <query join="AND" id="editorial_collections">
+            <basequery>
+                {"bool":
+                {
+                "must": [
+                {"match": {"aspects": "ccm:collection"}}
+                ]
+                }
+                }
+            </basequery>
+            <property name="ngsearchword" asFilter="false">
+                <exactMatching>true</exactMatching>
+                <statement>
+                    {
+                    "simple_query_string" : {
+                    "query": "${value}*",
+                    "fields": [
+                    "properties.cm:title^4",
+                    "properties.cm:name^4",
+                    "properties.cclom:general_description^2",
+                    "properties.cclom:general_keyword^2",
+                    "properties.ccm:wwwurl^2",
+                    "content.fulltext",
+                    "i18n.de_DE.ccm:taxonid^3",
+                    "i18n.de_DE.ccm:educationallearningresourcetype^3",
+                    "i18n.de_DE.ccm:educationalcontext^3",
+                    "i18n.de_DE.ccm:educationalintendedenduserrole^3"
+                    ],
+                    "default_operator": "and"
+                    }}
+                </statement>
+            </property>
+            <property name="ccm:taxonid">
+                <statement>
+                    {
+                    "match": {"properties.ccm:taxonid.keyword": "${valueRaw}" }
+                    }
+                </statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="virtual:collection_missing">
+                <statement>
+                    {"bool":
+                    {
+                    "must_not": [
+                    {"wildcard": {"properties.${valueRaw}": "*"}}
+                    ]
+                    }
+                    }
+                </statement>
+                <multiple>true</multiple>
+                <multiplejoin>AND</multiplejoin>
+            </property>
+            <property name="virtual:collection_public">
+                <statement value="published">
+                    {"match":{"permissions.read":"GROUP_EVERYONE"}}
+                </statement>
+                <statement value="not_published">
+                    {"bool":{"must_not":[
+                    {"match":{"permissions.read":"GROUP_EVERYONE"}}
+                    ]
+                    }}
+                </statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="virtual:collection_id">
+                <statement>
+                    {"bool":{
+                    "should":[
+                    {"match":{"path": "${valueRaw}"}},
+                    {"match":{"nodeRef.id": "${valueRaw}"}}
+                    ]
+                    }}
+                </statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="virtual:portal_type">
+                <statement value="0">
+                    {
+                    "regexp": {"fullpath": ".*\/5e40e372-735c-4b17-bbf7-e827a5702b57" }
+                    }
+                </statement>
+                <statement value="1">
+                    {"bool":
+                    {
+                    "must_not": [
+                    {
+                    "regexp": {"fullpath": ".*\/5e40e372-735c-4b17-bbf7-e827a5702b57" }
+                    }
+                    ]
+                    }
+                    }
+                </statement>
+            </property>
+        </query>
+        <query join="AND" id="collection_proposals">
+            <basequery>
+                {"bool":
+                {
+                "must": [
+                {"match": {"type": "ccm:collection_proposal"}}
+                ]
+                }
+                }
+            </basequery>
+            <property name="ngsearchword" asFilter="false">
+                <exactMatching>true</exactMatching>
+                <statement>
+                    {
+                    "simple_query_string" : {
+                    "query": "${value}",
+                    "fields": [
+                    "original.properties.cclom:title^4",
+                    "original.properties.cm:title^4",
+                    "original.properties.cm:name^4",
+                    "original.properties.cclom:general_description^2",
+                    "original.properties.cclom:general_keyword^2",
+                    "original.properties.ccm:wwwurl^2",
+                    "original.properties.ccm:oeh_publisher_combined^2",
+                    "original.properties.ccm:lifecyclecontributer_author^2",
+                    "content.fulltext",
+                    "i18n.de_DE.ccm:taxonid^3",
+                    "i18n.de_DE.ccm:educationallearningresourcetype^3",
+                    "i18n.de_DE.ccm:oeh_lrt^3",
+                    "i18n.de_DE.ccm:oeh_lrt_aggregated^3",
+                    "i18n.de_DE.ccm:educationalcontext^3",
+                    "i18n.de_DE.ccm:educationalintendedenduserrole^3"
+                    ],
+                    "default_operator": "and"
+                    }}
+                </statement>
+            </property>
+            <property name="ccm:collection_proposal_status"/>
+            <property name="virtual:collection_id">
+                <statement>
+                    {"bool":{
+                    "should":[
+                    {"match":{"collections.path": "${valueRaw}"}},
+                    {"match":{"collections.nodeRef.id.keyword": "${valueRaw}"}}
+                    ]
+                    }}
+                </statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+            <property name="ccm:taxonid">
+                <statement>
+                    {"term": {"collections.properties.ccm:taxonid.keyword": "${value}"}}
+                </statement>
+                <multiple>true</multiple>
+                <multiplejoin>OR</multiplejoin>
+            </property>
+        </query>
+        <query join="AND" id="wlo_collection">
+            <basequery>
+                {"bool":
+                {
+                "must": [
+                {"term": {"aspects": "ccm:collection_io_reference"}}
+                ],
+                "must_not": [
+                {"term": {"aspects": "ccm:io_childobject"}}
+                ]
+                }
+                }
+            </basequery>
+            <property name="collection">
+                <statement>{"wildcard":{"fullpath":"*${value}*"}}</statement>
+                <mandatory>true</mandatory>
+            </property>
+        </query>
+    </queries>
+</metadataset>

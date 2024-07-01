@@ -1,0 +1,171 @@
+<metadataset id="comein" label="ComeIn" hidden="false">
+  <i18n>mds</i18n>
+	<inherit>mds_oeh</inherit>
+    <name>ComeIn</name>
+    <widgets>
+      <widget>
+          <id>ccm:audience</id>
+          <caption>Personengruppe</caption>
+          <type>multivalueTree</type>
+          <hideIfEmpty>true</hideIfEmpty>
+          <placeholder>Wähle die Personengruppe</placeholder>
+          <bottomCaption>Personengruppe, für welche die Ressource didaktisiert wurde.</bottomCaption>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/educationalAudienceRole/index.json</valuespace>
+          <required>recommended</required>
+      </widget>
+      <widget>
+          <id>ccm:typeofschool</id>
+          <caption>Schulart</caption>
+          <type>multivalueTree</type>
+          <hideIfEmpty>true</hideIfEmpty>
+          <placeholder>Wähle die Schulart</placeholder>
+          <bottomCaption>Schulart, für welche der Einsatz der Ressource empfohlen wird.</bottomCaption>
+          <valuespace>https://skohub.io/dini-ag-kim/schularten/heads/main/w3id.org/kim/schularten/index.json</valuespace>
+          <required>optional</required>
+      </widget>
+	    <widget>
+          <id>ccm:educationalCredential</id>
+          <caption>Abschluss</caption>
+          <type>multivalueTree</type>
+          <hideIfEmpty>true</hideIfEmpty>
+		      <placeholder>Wähle den Abschluss</placeholder>
+          <bottomCaption>Abschluss, für welchen die Ressource konzipiert wurde.</bottomCaption>
+          <!-- Schulabschlüsse: Personengruppen in Ausbildung mit Ziel eines Schulabschlusses -->
+          <valuespace>https://skohub.io/dini-ag-kim/schulabschluesse/heads/main/w3id.org/kim/schulabschluesse/index.json</valuespace>
+          <!-- Lehramtsabschlüsse: Personengruppen in Aus-/Fortbildung mit (Ziel eines) Lehramtsabschluss -->
+          <valuespace>https://skohub.io/dini-ag-kim/kmk-vocabs/heads/main/w3id.org/kim/kmk-vocabs/lehramtstypen/index.json</valuespace>
+		  <!-- Hochschulabschlüsse: XHochschule -->
+          <required>optional</required>
+      </widget>
+      <widget>
+          <id>ccm:educationalinteractivitytype</id> <!-- same as cclom:interactivitytype -->
+          <!-- TODO: needs to be verified
+          <id rel="graphql">lom.educational.0.interactivityType</id>
+          -->
+          <caption>Lehr-/Lernform</caption>
+          <allowempty>true</allowempty>
+          <hideIfEmpty>true</hideIfEmpty>
+          <type>singleoption</type>
+          <placeholder>Wähle die vorherrschende Lehr-/Lernform</placeholder>
+          <bottomCaption>Lehr-/Lernform, die das Lernen mit der Ressource kennzeichnet.</bottomCaption>
+          <!-- Valuespace alternatives -->
+          <!-- LRMI valuespace (external) [source: https://github.com/dcmi/lrmi/tree/main/lrmi_vocabs/interactivityType]
+          <valuespace>https://raw.githubusercontent.com/dcmi/lrmi/main/lrmi_vocabs/interactivityType/interactivityType.jsonld</valuespace>
+          -->
+          <!-- LRMI valuespace (LRMI internal) -->
+          <values>
+              <value cap=""></value>
+          		<value cap="aktiv (eher selbstgesteuert)">http://purl.org/dcx/lrmi-vocabs/interactivityType/active</value>
+          		<value cap="erklärend (eher fremdgesteuert)">http://purl.org/dcx/lrmi-vocabs/interactivityType/expositive</value>
+          		<value cap="gemischt">http://purl.org/dcx/lrmi-vocabs/interactivityType/mixed</value>
+          </values>
+          <!-- Valuespace alternative, matching default internal valuespace
+          <values>
+              <value cap=""></value>
+          		<value cap="aktiv (eher selbstgesteuert)">active</value>
+          		<value cap="erklärend (eher fremdgesteuert)">expositive</value>
+          		<value cap="gemischt">mixed</value>
+          </values>
+          -->
+          <required>optional</required>
+      </widget>
+
+      <!-- overrides oeh-competence widgets to add more valuespaces -->
+      <widget>
+          <id>ccm:competence</id>
+          <type>multivalueTree</type>
+          <caption>Lernziele (Kompetenzen)</caption>
+          <bottomCaption>Kompetenzen, die mit diesem Inhalt gefördert werden sollen.</bottomCaption>
+          <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/digitalCompetencies/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/DigCompEdu/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/orientierungsrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/medienkompetenzrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/ude-modell/index.json</valuespace>
+          <valuespace>https://skohub.io/dini-ag-kim/kmk-vocabs/heads/main/w3id.org/kim/kmk-vocabs/bildungswissenschaften/index.json</valuespace>
+      </widget>
+      <widget>
+          <id>ccm:oeh_competence_requirements</id>
+          <type>multivalueTree</type>
+          <caption>Vorkenntnisse (Kompetenzen)</caption>
+          <bottomCaption>Benötigte Vorkenntnisse, die zur Bearbeitung des Inhalts nötig sind.</bottomCaption>
+          <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/digitalCompetencies/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/DigCompEdu/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/orientierungsrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/medienkompetenzrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/ude-modell/index.json</valuespace>
+          <valuespace>https://skohub.io/dini-ag-kim/kmk-vocabs/heads/main/w3id.org/kim/kmk-vocabs/bildungswissenschaften/index.json</valuespace>
+      </widget>
+      <widget>
+          <id>ccm:oeh_competence_check</id>
+          <type>multivalueTree</type>
+          <caption>Lernzielkontrolle (Kompetenzen)</caption>
+          <bottomCaption>Verweis auf Katalog mit einer Auswahl an Prüfungs- und Testfragen zur Lernzielkontrolle </bottomCaption>
+          <!-- alternative bottomCaption suggestion as there might be different ways to tests competences than 'questions':
+          <bottomCaption>Lernzielkontrollen (Kompetenzen), die durch die Ressource ermöglicht werden.</bottomCaption>
+          -->
+          <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/digitalCompetencies/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/DigCompEdu/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/orientierungsrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/medienkompetenzrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/ude-modell/index.json</valuespace>
+          <valuespace>https://skohub.io/dini-ag-kim/kmk-vocabs/heads/main/w3id.org/kim/kmk-vocabs/bildungswissenschaften/index.json</valuespace>
+      </widget>
+    </widgets>
+    <templates>
+          <!-- overrides oeh-template 'node_paedagogics' -->
+          <template>
+              <id>node_paedagogics</id>
+              <caption>Pädagogisches</caption>
+              <icon>school</icon>
+              <html><![CDATA[
+            			<cclom:typicallearningtime isExtended="true">
+            			<cclom:duration interactionType="None" isExtended="true">
+            			<ccm:curriculum>
+
+            			<ccm:educationalintendedenduserrole>
+                  <ccm:audience isExtended="true">
+                  <ccm:educationalCredential isExtended="true">
+
+            			<ccm:oeh_competence_requirements isExtended="true">
+            			<div style="display:flex; justify-content: center;">
+            				<ccm:oeh_languageTarget style="flex-grow:3 padding: 0 10px;" isExtended="true">
+            				<ccm:oeh_languageLevel style="flex-grow:7; padding: 0 10px;" isExtended="true" bottomCaption="Sprachniveaustufen nach den europäischen Referenzrahmen">
+            			</div>
+            			<ccm:competence isExtended="true">
+            			<ccm:oeh_competence_check isExtended="true">
+
+                  <ccm:educationalinteractivitytype isExtended="true">
+        				]]>
+              </html>
+          </template>
+          <!-- overrides oeh-template 'node_classification' -->
+          <template>
+              <id>node_classification</id>
+              <caption>Typisierung</caption>
+              <icon>done_all</icon>
+              <html><![CDATA[
+                    <virtual:type interactionType="None" style="display:none">
+            			  <ccm:oeh_lrt>
+            			  <ccm:objecttype class="wlo-old-data" isExtended="true" interactionType="None">
+                          <ccm:oeh_widgets class="wlo-old-data" isExtended="true" interactionType="None">
+            			  <ccm:sourceContentType class="wlo-old-data" isExtended="true" interactionType="None">
+            			  <ccm:toolCategory class="wlo-old-data" isExtended="true" interactionType="None">
+            			  <ccm:general_identifier isExtended="true">
+
+            			  <ccm:taxonid>
+            			  <cclom:classification_keyword isExtended="true">
+            			  <cclom:general_keyword isExtended="true">
+            			  <ccm:educationalcontext>
+                    <ccm:typeofschool isExtended="true">
+            			  <ccm:educationaltypicalagerange required="ignore"  isExtended="true">
+            			  <ccm:fskRating isExtended="true">
+            			  <ccm:oeh_quality_relevancy_for_education isExtended="true">
+            			  <div class="wlo-side-by-side wlo-mediatypes">
+            				  <virtual:mediatype interactionType="None" isExtended="true">
+            				  <cclom:format interactionType="None" hideIfEmpty="false" isExtended="true">
+            			  </div>
+        				]]>
+            </html>
+          </template>
+    </templates>
+</metadataset>

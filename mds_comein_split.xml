@@ -1,0 +1,160 @@
+<metadataset id="comein" label="ComeIn" hidden="false">
+  <i18n>mds</i18n>
+	<inherit>mds_oeh</inherit>
+    <name>ComeIn</name>
+    <widgets>
+      <widget>
+          <id>ccm:audience</id>
+          <caption>Personengruppe</caption>
+          <type>multivalueTree</type>
+          <hideIfEmpty>true</hideIfEmpty>
+          <placeholder>Wähle die Personengruppe</placeholder>
+          <bottomCaption>Personengruppe, für welche die Ressource didaktisiert wurde.</bottomCaption>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/educationalAudienceRole/index.json</valuespace>
+          <required>recommended</required>
+      </widget>
+      <widget>
+          <id>ccm:typeofschool</id>
+          <caption>Schulart</caption>
+          <type>multivalueTree</type>
+          <hideIfEmpty>true</hideIfEmpty>
+          <placeholder>Wähle die Schulart</placeholder>
+          <bottomCaption>Schulart, für welche der Einsatz der Ressource empfohlen wird.</bottomCaption>
+          <valuespace>https://skohub.io/dini-ag-kim/schulformen/heads/main/w3id.org/kim/schulformen/index.json</valuespace>
+          <required>optional</required>
+      </widget>
+	    <widget>
+          <id>comein:educationalCredential</id>
+          <caption>Abschluss</caption>
+          <type>multivalueTree</type>
+          <hideIfEmpty>true</hideIfEmpty>
+		      <placeholder>Wähle den Abschluss</placeholder>
+          <bottomCaption>Abschluss, für welchen die Ressource konzipiert wurde.</bottomCaption>
+          <!-- Schulabschlüsse: Personengruppen in Ausbildung mit Ziel eines Schulabschlusses -->
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/school-certifications/index.json</valuespace>
+          <!-- Lehramtsabschlüsse: Personengruppen in Aus-/Fortbildung mit (Ziel eines) Lehramtsabschluss -->
+          <valuespace>https://skohub.io/dini-ag-kim/kmk-vocabs/heads/main/w3id.org/kim/kmk-vocabs/lehramtstypen/index.json</valuespace>
+          <required>optional</required>
+      </widget>
+      <widget>
+          <id>ccm:educationalinteractivitytype</id> <!-- same as cclom:interactivitytype -->
+          <!-- TODO: needs to be verified
+          <id rel="graphql">lom.educational.0.interactivityType</id>
+          -->
+          <caption>Lehr-/Lernform</caption>
+          <allowempty>true</allowempty>
+          <hideIfEmpty>true</hideIfEmpty>
+          <type>singleoption</type>
+          <placeholder>Wähle die vorherrschende Lehr-/Lernform</placeholder>
+          <bottomCaption>Lehr-/Lernform, die das Lernen mit der Ressource kennzeichnet.</bottomCaption>
+          <!-- Valuespace alternatives -->
+          <!-- LRMI valuespace (external) [source: https://github.com/dcmi/lrmi/tree/main/lrmi_vocabs/interactivityType]
+          <valuespace>https://raw.githubusercontent.com/dcmi/lrmi/main/lrmi_vocabs/interactivityType/interactivityType.jsonld</valuespace>
+          -->
+          <!-- LRMI valuespace (LRMI internal) -->
+          <values>
+              <value cap=""></value>
+          		<value cap="aktiv (eher selbstgesteuert)">http://purl.org/dcx/lrmi-vocabs/interactivityType/active</value>
+          		<value cap="erklärend (eher fremdgesteuert)">http://purl.org/dcx/lrmi-vocabs/interactivityType/expositive</value>
+          		<value cap="gemischt">http://purl.org/dcx/lrmi-vocabs/interactivityType/mixed</value>
+          </values>
+          <!-- Valuespace alternative, matching default internal valuespace
+          <values>
+              <value cap=""></value>
+          		<value cap="aktiv (eher selbstgesteuert)">active</value>
+          		<value cap="erklärend (eher fremdgesteuert)">expositive</value>
+          		<value cap="gemischt">mixed</value>
+          </values>
+          -->
+          <required>optional</required>
+      </widget>
+
+      <!-- overrides oeh-competence widgets to add more valuespaces -->
+      <widget>
+          <id>ccm:competence</id>
+          <type>multivalueTree</type>
+          <caption>Lernziele (Kompetenzen)</caption>
+          <bottomCaption>Kompetenzen, die mit diesem Inhalt gefördert werden sollen.</bottomCaption>
+          <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/digitalCompetencies/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/DigCompEdu/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/orientierungsrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/medienkompetenzrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/ude-modell/index.json</valuespace>
+          <valuespace>https://skohub.io/dini-ag-kim/kmk-vocabs/heads/main/w3id.org/kim/kmk-vocabs/bildungswissenschaften/index.json</valuespace>
+      </widget>
+      <widget>
+          <id>ccm:oeh_competence_requirements</id>
+          <type>multivalueTree</type>
+          <caption>Vorkenntnisse (Kompetenzen)</caption>
+          <bottomCaption>Benötigte Vorkenntnisse, die zur Bearbeitung des Inhalts nötig sind.</bottomCaption>
+          <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/digitalCompetencies/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/DigCompEdu/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/orientierungsrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/medienkompetenzrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/ude-modell/index.json</valuespace>
+          <valuespace>https://skohub.io/dini-ag-kim/kmk-vocabs/heads/main/w3id.org/kim/kmk-vocabs/bildungswissenschaften/index.json</valuespace>
+      </widget>
+      <widget>
+          <id>ccm:oeh_competence_check</id>
+          <type>multivalueTree</type>
+          <caption>Lernzielkontrolle (Kompetenzen)</caption>
+          <bottomCaption>Verweis auf Katalog mit einer Auswahl an Prüfungs- und Testfragen zur Lernzielkontrolle </bottomCaption>
+          <!-- alternative bottomCaption suggestion as there might be different ways to tests competences than 'questions':
+          <bottomCaption>Lernzielkontrollen (Kompetenzen), die durch die Ressource ermöglicht werden.</bottomCaption>
+          -->
+          <valuespace>https://vocabs.openeduhub.de/w3id.org/openeduhub/vocabs/digitalCompetencies/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/DigCompEdu/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/orientierungsrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/medienkompetenzrahmenNRW/index.json</valuespace>
+          <valuespace>https://comein-nrw.github.io/vocabs/w3id.org/comein/vocabs/ude-modell/index.json</valuespace>
+          <valuespace>https://skohub.io/dini-ag-kim/kmk-vocabs/heads/main/w3id.org/kim/kmk-vocabs/bildungswissenschaften/index.json</valuespace>
+      </widget>
+
+      <!-- Additional section; not integrated -->
+      <widget>
+          <id>comein:technicalRequirements</id>
+          <type>textarea</type>
+          <caption>Hard- und Softwarevoraussetzungen</caption>
+          <bottomCaption>Nenne Hard-/Softwarevoraussetzungen, die für den Einsatz der Ressource erforderlich sind.</bottomCaption>
+          <hideIfEmpty>true</hideIfEmpty>
+          <required>optional</required>
+      </widget>
+      <widget>
+        <id>comein:groupSize</id>
+        <caption>(Empfohlene) Gruppen-/Klassengröße</caption>
+        <bottomCaption>Gruppen-/Klassengröße, für welche die Ressource geeignet ist.</bottomCaption>
+        <type>range</type>
+        <min>0</min>
+        <max>99</max>
+      </widget>
+
+    </widgets>
+    <templates>
+          <!-- overrides oeh-template 'node_paedagogics' -->
+          <template>
+              <id>node_paedagogics</id>
+              <caption>Pädagogisches</caption>
+              <icon>school</icon>
+              <html><![CDATA[
+            			<cclom:typicallearningtime isExtended="true">
+            			<cclom:duration interactionType="None" isExtended="true">
+            			<ccm:curriculum>
+
+            			<ccm:educationalintendedenduserrole>
+                  <ccm:audience isExtended="true">
+                  <comein:educationalCredential isExtended="true">
+
+            			<ccm:oeh_competence_requirements isExtended="true">
+            			<div style="display:flex; justify-content: center;">
+            				<ccm:oeh_languageTarget style="flex-grow:3 padding: 0 10px;" isExtended="true">
+            				<ccm:oeh_languageLevel style="flex-grow:7; padding: 0 10px;" isExtended="true" bottomCaption="Sprachniveaustufen nach den europäischen Referenzrahmen">
+            			</div>
+            			<ccm:competence isExtended="true">
+            			<ccm:oeh_competence_check isExtended="true">
+
+                  <ccm:educationalinteractivitytype isExtended="true">
+        				]]>
+              </html>
+          </template>
+    </templates>
+</metadataset>
